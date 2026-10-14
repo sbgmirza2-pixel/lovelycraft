@@ -7,21 +7,16 @@ export default function SectionTabs() {
   const dropdownRef = useRef(null);
 
   const tocItems = [
-    { id: 'about', label: 'Lovely Craft Piston Trap APK – Smart Piston Mechanics and Fun Traps' },
-    { id: 'sandbox', label: 'Discover a Sandbox Unlike Any Other' },
-    { id: 'piston-mechanics', label: 'Advanced Piston Mechanics That Bring Fun to Life' },
-    { id: 'physics-system', label: 'Innovative Piston Physics System' },
-    { id: 'traps-chains', label: 'From Simple Traps to Complex Chains' },
-    { id: 'redstone-logic', label: 'Pressure Plates, Levers, and Redstone Logic' },
-    { id: 'hidden-doors', label: 'Hidden Doors, Collapsing Floors, and Secret Paths' },
-    { id: 'trap-ideas', label: 'Fun Trap Ideas for Creative Players' },
-    { id: 'characters-biomes', label: 'Meet Diverse Characters and Explore Rich Biomes' },
-    { id: 'build-trade', label: 'Build, Trade, and Unlock Hidden Secrets' },
-    { id: 'customization', label: 'Customization That Reflects Your Personality' },
-    { id: 'community-support', label: 'Regular Updates and Community Support' },
+    { id: 'about', label: 'About Lovely Craft APK' },
+    { id: 'features', label: 'Key Features of Lovely Craft' },
+    { id: 'checklist', label: 'A practical checklist for installing Lovely Craft' },
+    { id: 'pros-cons', label: 'Pros and cons of Lovely Craft APK' },
+    { id: 'install', label: 'Step-by-step installation guide' },
+    { id: 'safety', label: 'Safety and security guidelines' },
+    { id: 'who-should-try', label: 'Who should try Lovely Craft APK?' },
+    { id: 'faq', label: 'Frequently asked questions' }
   ];
 
-  // Click outside to close dropdown
   useEffect(() => {
     function handleClickOutside(event) {
       if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
@@ -41,51 +36,57 @@ export default function SectionTabs() {
   };
 
   return (
-    <div className="bg-[#F5F9F1] border-b border-[#DCE8D6] py-3">
-      <div className="max-w-[1120px] mx-auto px-4 flex flex-wrap items-center gap-8">
+    <div className="bg-[#F5F9F1] border-b border-[#DCE8D6] py-3.5 sticky top-16 z-40 shadow-[0_2px_4px_rgba(0,0,0,0.02)]">
+      <div className="max-w-[1120px] mx-auto px-4 flex flex-wrap items-center gap-6">
         
-        {/* App Information Tab (Green Underline) */}
+        {/* App Information Tab */}
         <a 
           href="#app-info" 
-          className="font-[var(--font-display)] font-extrabold text-base md:text-lg text-[#15251B] relative pb-2 no-underline shrink-0"
+          className="font-[var(--font-display)] font-extrabold text-sm md:text-base text-[#15251B] relative pb-1.5 no-underline shrink-0"
         >
           App Information
-          <span className="absolute bottom-0 left-0 w-full h-[3px] bg-[#7BE23C]"></span>
+          <span className="absolute bottom-0 left-0 w-full h-[2.5px] bg-[#7BE23C]"></span>
         </a>
 
-        {/* Table of Contents Dropdown Tab */}
+        {/* Table of Contents Dropdown Button */}
         <div className="relative shrink-0" ref={dropdownRef}>
           <button
+            type="button"
             onClick={() => setIsOpen(!isOpen)}
-            className="inline-flex items-center gap-1.5 font-[var(--font-display)] font-bold text-base md:text-lg text-[#51655A] hover:text-[#15251B] bg-transparent border-none cursor-pointer transition-colors pb-2"
+            className={`inline-flex items-center gap-2 font-[var(--font-display)] font-bold text-sm md:text-base transition-colors px-3.5 py-1.5 rounded-none border cursor-pointer ${
+              isOpen 
+                ? 'bg-[#E5F5DC] text-[#15251B] border-[#23891A]' 
+                : 'bg-white text-[#51655A] border-[#DCE8D6] hover:text-[#15251B] hover:border-[#23891A]'
+            }`}
           >
             <span>Table of Contents</span>
             <svg
-              className={`w-4 h-4 text-[#7BE23C] transform transition-transform duration-200 ${
+              className={`w-4 h-4 text-[#23891A] transform transition-transform duration-200 ${
                 isOpen ? 'rotate-180' : 'rotate-0'
               }`}
               fill="none"
               stroke="currentColor"
-              strokeWidth="3"
+              strokeWidth="2.5"
               viewBox="0 0 24 24"
             >
               <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
             </svg>
           </button>
 
-          {/* Dropdown Menu */}
+          {/* Styled Dropdown Menu */}
           {isOpen && (
-            <div className="absolute left-0 mt-2 w-80 md:w-96 bg-white border-2 border-[#15251B] shadow-[4px_4px_0_#15251B] rounded-none p-3 max-h-96 overflow-y-auto z-50">
-              <ul className="list-none m-0 p-0 flex flex-col gap-2">
+            <div className="absolute left-0 mt-2 w-80 md:w-[440px] bg-white border border-[#DCE8D6] shadow-[0_10px_25px_rgba(21,37,27,0.08)] rounded-none p-2 max-h-[380px] overflow-y-auto z-50">
+              <ul className="list-none m-0 p-0 flex flex-col gap-1">
                 {tocItems.map((item, index) => (
                   <li key={index}>
                     <button
+                      type="button"
                       onClick={() => scrollToSection(item.id)}
-                      className="w-full text-left flex items-start gap-2.5 p-1.5 hover:bg-[#F5F9F1] transition-colors cursor-pointer group rounded-none"
+                      className="w-full text-left flex items-center gap-3 px-3 py-2.5 hover:bg-[#F5F9F1] transition-all cursor-pointer group rounded-none border-0 bg-transparent"
                     >
-                      {/* Theme Green Bullet Point */}
-                      <span className="w-2.5 h-2.5 bg-[#7BE23C] border border-[#15251B] rounded-none shrink-0 mt-1.5 group-hover:bg-[#B91FCC] transition-colors"></span>
-                      <span className="font-[var(--font-body)] text-xs md:text-sm font-bold text-[#15251B] leading-snug group-hover:text-[#B91FCC] transition-colors">
+                      {/* Accent Dot/Square */}
+                      <span className="w-1.5 h-1.5 bg-[#B91FCC] group-hover:scale-150 transition-transform shrink-0"></span>
+                      <span className="font-[var(--font-body)] text-xs md:text-sm font-medium text-[#42544A] leading-snug group-hover:text-[#15251B] group-hover:font-semibold transition-colors">
                         {item.label}
                       </span>
                     </button>

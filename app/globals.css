@@ -1,6 +1,11 @@
 @import "tailwindcss";
 
 @layer base {
+  /* Saare sections aur IDs ke liye top margin set kar dein */
+  section, [id] {
+    scroll-margin-top: 130px; /* Navbar + SectionTabs ki height ke mutabiq adjust kiya gaya hai */
+  }
+
   :root {
     --bg: #F5F9F1;
     --surface: #FFFFFF;
@@ -13,9 +18,6 @@
     --lime: #7BE23C;
     --pink: #B91FCC;
     --pink-tint: #F9E6FC;
-    --display: var(--font-display), system-ui, sans-serif;
-    --body: var(--font-body), system-ui, sans-serif;
-    --pixel: var(--font-pixel), monospace;
   }
 
   html {
@@ -25,17 +27,34 @@
   body {
     background-color: var(--bg);
     color: var(--ink);
-    font-family: var(--body);
+    font-family: var(--font-body), sans-serif;
     font-size: 17px;
     line-height: 1.65;
   }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-display), sans-serif;
+  }
 }
 
-/* Floating Pixel Boxes Animation */
+.font-pixel {
+  font-family: var(--font-pixel), monospace;
+}
+
 @keyframes bob { 
   0%, 100% { transform: translateY(0); } 
   50% { transform: translateY(-12px); } 
 }
 .animate-bob {
   animation: bob 7s ease-in-out infinite;
+}
+@layer base {
+  /* Scroll offset for smooth navigation */
+  html {
+    scroll-padding-top: 85px; /* Directly sets offset for fragment links */
+  }
+
+  section, [id] {
+    scroll-margin-top: 85px;
+  }
 }

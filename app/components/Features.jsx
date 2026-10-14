@@ -27,11 +27,11 @@ export default function Features() {
   ];
 
   return (
-    <section className="py-12 md:py-16 bg-[#F5F9F1] border-b border-[#DCE8D6]" id="features">
+    <section  id="features" className="py-12 md:py-16 bg-[#F5F9F1] border-b border-[#DCE8D6]" >
       <div className="max-w-[1120px] mx-auto px-4">
         
         {/* Section Heading */}
-        <div className="flex flex-col gap-3 mb-10 text-center md:text-left">
+        <div  className="flex flex-col gap-3 mb-10 text-center md:text-left">
           <span className="font-[var(--font-pixel)] text-[0.8rem] uppercase tracking-[0.14em] text-[#B91FCC] inline-flex items-center gap-2.5 justify-center md:justify-start">
             <span className="w-2.5 h-2.5 bg-[#7BE23C] shadow-[3px_3px_0_#F9E6FC] inline-block"></span>
             Features
