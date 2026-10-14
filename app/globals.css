@@ -1,26 +1,41 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
+@layer base {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --bg: #F5F9F1;
+    --surface: #FFFFFF;
+    --ink: #15251B;
+    --muted: #51655A;
+    --line: #DCE8D6;
+    --green: #23891A;
+    --green-dark: #1A6D13;
+    --green-tint: #E5F5DC;
+    --lime: #7BE23C;
+    --pink: #B91FCC;
+    --pink-tint: #F9E6FC;
+    --display: var(--font-display), system-ui, sans-serif;
+    --body: var(--font-body), system-ui, sans-serif;
+    --pixel: var(--font-pixel), monospace;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: var(--bg);
+    color: var(--ink);
+    font-family: var(--body);
+    font-size: 17px;
+    line-height: 1.65;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+/* Floating Pixel Boxes Animation */
+@keyframes bob { 
+  0%, 100% { transform: translateY(0); } 
+  50% { transform: translateY(-12px); } 
+}
+.animate-bob {
+  animation: bob 7s ease-in-out infinite;
 }
