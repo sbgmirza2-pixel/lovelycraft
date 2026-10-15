@@ -8,6 +8,7 @@ export default function ShareButton() {
   const menuRef = useRef(null);
 
   const currentUrl = typeof window !== 'undefined' ? window.location.href : '';
+  const shareTitle = 'Lovely Craft APK';
 
   const handleCopy = () => {
     navigator.clipboard.writeText(currentUrl);
@@ -23,9 +24,20 @@ export default function ShareButton() {
     if (platform === 'facebook') {
       shareUrl = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(currentUrl)}`;
     } else if (platform === 'whatsapp') {
-      shareUrl = `https://api.whatsapp.com/send?text=${encodeURIComponent(currentUrl)}`;
+      shareUrl = `https://api.whatsapp.com/send?text=${encodeURIComponent(`${shareTitle} -${currentUrl}`)}`;
+    } else if (platform === 'twitter') {
+      shareUrl = `https://twitter.com/intent/tweet?url=${encodeURIComponent(currentUrl)}&text=${encodeURIComponent(shareTitle)}`;
+    } else if (platform === 'email') {
+      shareUrl = `mailto:?subject=${encodeURIComponent(shareTitle)}&body=${encodeURIComponent(`Check out this page: ${currentUrl}`)}`;
     }
-    if (shareUrl) window.open(shareUrl, '_blank');
+    
+    if (shareUrl) {
+      if (platform === 'email') {
+        window.location.href = shareUrl;
+      } else {
+        window.open(shareUrl, '_blank');
+      }
+    }
     setIsOpen(false);
   };
 
@@ -63,18 +75,28 @@ export default function ShareButton() {
 
         {/* Expanded Social Icons List */}
         {isOpen && (
-          <div className="flex items-center gap-2 pr-1 animate-fadeIn">
-            {/* Instagram (Copy Link) */}
+          <div className="flex items-center gap-2 pr-1 animate-fadeIn flex-wrap max-w-[280px]">
+            {/* WhatsApp */}
             <button
               type="button"
-              onClick={handleCopy}
+              onClick={() => shareToSocial('whatsapp')}
               className="w-10 h-10 rounded-full bg-white hover:bg-[#E5F5DC] text-[#15251B] flex items-center justify-center transition-transform hover:scale-110 shadow-[0_2px_6px_rgba(0,0,0,0.05)] cursor-pointer border-0"
-              title="Instagram (Copy Link)"
+              title="WhatsApp"
             >
               <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
-                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
-                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
-                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                <path strokeLinecap="round" strokeLinejoin="round" d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/>
+              </svg>
+            </button>
+
+            {/* Twitter / X */}
+            <button
+              type="button"
+              onClick={() => shareToSocial('twitter')}
+              className="w-10 h-10 rounded-full bg-white hover:bg-[#E5F5DC] text-[#15251B] flex items-center justify-center transition-transform hover:scale-110 shadow-[0_2px_6px_rgba(0,0,0,0.05)] cursor-pointer border-0"
+              title="Twitter / X"
+            >
+              <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
               </svg>
             </button>
 
@@ -90,15 +112,27 @@ export default function ShareButton() {
               </svg>
             </button>
 
-            {/* WhatsApp */}
+            {/* Email */}
             <button
               type="button"
-              onClick={() => shareToSocial('whatsapp')}
+              onClick={() => shareToSocial('email')}
               className="w-10 h-10 rounded-full bg-white hover:bg-[#E5F5DC] text-[#15251B] flex items-center justify-center transition-transform hover:scale-110 shadow-[0_2px_6px_rgba(0,0,0,0.05)] cursor-pointer border-0"
-              title="WhatsApp"
+              title="Email"
             >
               <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/>
+                <path strokeLinecap="round" strokeLinejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+              </svg>
+            </button>
+
+            {/* Copy Link */}
+            <button
+              type="button"
+              onClick={handleCopy}
+              className="w-10 h-10 rounded-full bg-white hover:bg-[#E5F5DC] text-[#15251B] flex items-center justify-center transition-transform hover:scale-110 shadow-[0_2px_6px_rgba(0,0,0,0.05)] cursor-pointer border-0"
+              title="Copy Link"
+            >
+              <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round5" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
               </svg>
             </button>
           </div>
