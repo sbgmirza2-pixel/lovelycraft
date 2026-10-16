@@ -15,7 +15,7 @@ export default function Hero() {
       <div className="max-w-[1120px] mx-auto px-4 relative z-10 pt-12 md:pt-16 pb-12 md:pb-16">
         <div className="flex flex-col gap-6 items-start text-left max-w-[780px]">
           
-          <h1 className="text-[clamp(2.6rem,7vw,4.6rem)] font-[var(--font-display)] font-extrabold leading-[1.1] tracking-[-0.02em] m-0 text-[#15251B]">
+          <h1 className="text-[clamp(2.6rem,7vw,4.6rem)] font-[var(--font-display)] font-extrabold leading-[1.1] tracking-[-0.02em] m-0 text-[#15251B] ">
             Lovely Craft 
           </h1>
 
@@ -30,9 +30,7 @@ export default function Hero() {
               style={{ background: 'linear-gradient(135deg, #34BC24, #1E8A17)' }}
               href="#download"
             >
-              <svg className="w-5 h-5 p-0.5 bg-white/22 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round">
-                <path d="M12 4v11"/><path d="m7 11 5 5 5-5"/><path d="M5 20h14"/>
-              </svg>
+           
               Download Lovely Craft
             </a>
 
@@ -41,7 +39,7 @@ export default function Hero() {
               className="inline-flex items-center justify-center px-5 py-3 font-[var(--font-body)] font-bold text-sm text-[#1A6D13] bg-white border border-[#23891A]/30 rounded-none shadow-[0_2px_8px_rgba(0,0,0,0.05)] hover:bg-[#E5F5DC] transition-all"
               href="#install"
             >
-              Install guide
+              Installation guide
             </a>
 
             {/* Share Button */}

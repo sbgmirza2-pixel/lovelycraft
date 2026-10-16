@@ -56,7 +56,7 @@ export default function ShareButton() {
         <button
           type="button"
           onClick={() => setIsOpen(!isOpen)}
-          className={`w-10 h-10 rounded-full flex items-center justify-center transition-all cursor-pointer border-0 shrink-0 ${
+          className={`w-8 h-8 rounded-full flex items-center justify-center transition-all cursor-pointer border-0 shrink-0 ${
             isOpen 
               ? 'bg-[#7BE23C] text-[#15251B] shadow-inner rotate-45' 
               : 'bg-white text-[#15251B] hover:bg-[#E5F5DC] shadow-[0_2px_8px_rgba(0,0,0,0.06)]'
