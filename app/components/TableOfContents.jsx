@@ -57,7 +57,7 @@ export default function TableOfContents() {
       </button>
 
       {isOpen && (
-        <div className="absolute left-0 mt-2 w-80 md:w-[420px] bg-white border border-[#DCE8D6] shadow-[4px_4px_0_rgba(21,37,27,0.1)] rounded-none p-3 max-h-96 overflow-y-auto z-50">
+        <div className="absolute left-0 mt-2 w-80 md:w-[420px] bg-white border border-[#DCE8D6] shadow-[4px_4px_0_rgba(21,37,27,0.1)] rounded-none p-3 z-50">
           <ul className="list-none m-0 p-0 flex flex-col gap-1.5">
             {tocItems.map((item, index) => (
               <li key={index}>

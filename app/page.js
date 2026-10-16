@@ -35,10 +35,7 @@ export default function Home() {
         <Checklist />
       </div>
 
-      <div id="pros-cons">
-        <ProsCons />
-      </div>
-
+    
       <div id="install">
         <InstallGuide />
       </div>
@@ -51,11 +48,16 @@ export default function Home() {
         <WhoShouldTry />
       </div>
 
-      <Conclusion />
+        <div id="pros-cons">
+        <ProsCons />
+      </div>
 
-      <div id="faq">
+         <div id="faq">
         <Faq />
       </div>
+      <Conclusion />
+
+    
 
       <Footer />
     </main>

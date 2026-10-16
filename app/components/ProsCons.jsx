@@ -25,11 +25,11 @@ export default function ProsCons() {
           Pros and Cons
         </h2>
 
-        {/* Stacked Layout: Pros on top, Cons below */}
-        <div className="flex flex-col gap-6">
+        {/* Side-by-Side Grid Layout */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           
           {/* Pros Box */}
-          <div className="bg-white border border-[#DCE8D6] p-6 md:p-8">
+          <div className="bg-white border border-[#DCE8D6] p-6 md:p-8 rounded-none">
             <h3 className="font-[var(--font-display)] text-lg md:text-xl font-bold text-[#23891A] mb-4 uppercase tracking-wide">
               Pros
             </h3>
@@ -43,8 +43,8 @@ export default function ProsCons() {
           </div>
 
           {/* Cons Box */}
-          <div className="bg-white border border-[#DCE8D6] p-6 md:p-8">
-            <h3 className="font-[var(--font-display)] text-lg md:text-xl font-bold text-[#B91FCC] mb-4 uppercase tracking-wide">
+          <div className="bg-white border border-[#DCE8D6] p-6 md:p-8 rounded-none">
+            <h3 className="font-[var(--font-display)] text-lg md:text-xl font-bold text-[#15251B] mb-4 uppercase tracking-wide">
               Cons
             </h3>
             <ul className="list-disc list-inside m-0 p-0 flex flex-col gap-2.5">

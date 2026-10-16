@@ -16,7 +16,7 @@ export default function Hero() {
         <div className="flex flex-col gap-6 items-start text-left max-w-[780px]">
           
           <h1 className="text-[clamp(2.6rem,7vw,4.6rem)] font-[var(--font-display)] font-extrabold leading-[1.1] tracking-[-0.02em] m-0 text-[#15251B]">
-            Lovely Craft
+            Lovely Craft 
           </h1>
 
           <p className="font-[var(--font-body)] text-[1.18rem] text-[#51655A] max-w-[58ch] m-0 leading-relaxed">
