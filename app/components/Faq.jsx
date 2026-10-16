@@ -25,62 +25,66 @@ export default function Faq() {
   };
 
   return (
-    <section className="py-12 md:py-16 bg-[#F5F9F1] border-b border-[#DCE8D6]" id="faq">
+    <section className="py-12 md:py-16 bg-white border-b border-[#DCE8D6]" id="faq">
       <div className="max-w-[1120px] mx-auto px-4">
         
-        {/* Section Heading */}
-        <div className="flex flex-col gap-3 mb-8">
-          <div className="flex items-center gap-2">
-            <span className="w-2.5 h-2.5 bg-[#7BE23C] inline-block"></span>
-            <span className="font-pixel text-[0.8rem] uppercase tracking-[0.14em] font-bold text-[#B91FCC]">
-              FAQS
+        {/* 2-Column Responsive Layout */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
+          
+          {/* Left Column: Heading & Context */}
+          <div className="lg:col-span-4 flex flex-col gap-3">
+            <span className="font-[var(--font-display)] text-xs font-extrabold uppercase tracking-widest text-[#23891A]">
+              Help & Support
             </span>
+            <h2 className="text-2xl md:text-3xl font-[var(--font-display)] font-extrabold text-[#15251B] m-0 leading-tight">
+              Frequently Asked Questions
+            </h2>
+            <p className="font-[var(--font-body)] text-[#51655A] text-sm md:text-base m-0 leading-relaxed">
+              Got questions about Lovely Craft APK? Find quick answers to common queries regarding gameplay, features, and compatibility.
+            </p>
           </div>
-          <h2 className="text-[clamp(1.8rem,3.2vw,2.5rem)] font-[var(--font-display)] font-extrabold text-[#15251B] m-0">
-            Frequently asked questions
-          </h2>
-        </div>
 
-        {/* FAQ Accordion List */}
-        <div className="flex flex-col gap-4 max-w-3xl">
-          {faqList.map((item, index) => {
-            const isOpen = openIndex === index;
-            return (
-              <div 
-                key={index} 
-                className={`bg-white border rounded-2xl transition-all duration-200 overflow-hidden ${
-                  isOpen ? 'border-[#8BD952] shadow-[0_4px_12px_rgba(35,137,26,0.06)]' : 'border-[#DCE8D6]'
-                }`}
-              >
-                <button
-                  type="button"
-                  onClick={() => toggleFaq(index)}
-                  className="w-full text-left p-5 md:p-6 flex items-center justify-between gap-4 cursor-pointer select-none bg-transparent border-0"
+          {/* Right Column: Accordion Items */}
+          <div className="lg:col-span-8 flex flex-col gap-3.5">
+            {faqList.map((item, index) => {
+              const isOpen = openIndex === index;
+              return (
+                <div 
+                  key={index} 
+                  className={`bg-white border transition-all duration-200 ${
+                    isOpen ? 'border-[#23891A] bg-[#F9FCF6]' : 'border-[#DCE8D6] hover:border-[#23891A]/50'
+                  }`}
                 >
-                  <span className="font-[var(--font-display)] font-bold text-base md:text-lg text-[#15251B]">
-                    {item.question}
-                  </span>
-                  
-                  {/* Plus / Minus Icon Badge */}
-                  <span 
-                    className={`w-7 h-7 flex items-center justify-center font-bold text-base shrink-0 rounded-lg transition-colors ${
-                      isOpen 
-                        ? 'bg-[#23891A] text-white' 
-                        : 'bg-[#EBF7E3] text-[#23891A]'
-                    }`}
+                  <button
+                    type="button"
+                    onClick={() => toggleFaq(index)}
+                    className="w-full text-left p-4 md:p-5 flex items-center justify-between gap-4 cursor-pointer select-none bg-transparent border-0"
                   >
-                    {isOpen ? '−' : '+'}
-                  </span>
-                </button>
+                    <span className="font-[var(--font-display)] font-bold text-base md:text-lg text-[#15251B]">
+                      {item.question}
+                    </span>
+                    
+                    <span 
+                      className={`w-7 h-7 flex items-center justify-center font-bold text-sm shrink-0 transition-colors ${
+                        isOpen 
+                          ? 'bg-[#23891A] text-white' 
+                          : 'bg-[#F5F9F1] text-[#23891A]'
+                      }`}
+                    >
+                      {isOpen ? '−' : '+'}
+                    </span>
+                  </button>
 
-                {isOpen && (
-                  <div className="px-5 pb-6 md:px-6 md:pb-6 font-[var(--font-body)] text-[#51655A] text-base leading-relaxed">
-                    {item.answer}
-                  </div>
-                )}
-              </div>
-            );
-          })}
+                  {isOpen && (
+                    <div className="px-4 pb-5 md:px-5 md:pb-5 font-[var(--font-body)] text-[#51655A] text-sm md:text-base leading-relaxed border-t border-[#DCE8D6]/60 pt-3">
+                      {item.answer}
+                    </div>
+                  )}
+                </div>
+              );
+            })}
+          </div>
+
         </div>
 
       </div>
