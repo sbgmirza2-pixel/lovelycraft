@@ -29,7 +29,7 @@ export default function ProsCons() {
         <div className="flex flex-col gap-6">
           
           {/* Pros Box */}
-          <div className="bg-[#F9FCF6] border border-[#DCE8D6] p-6 md:p-8">
+          <div className="bg-white border border-[#DCE8D6] p-6 md:p-8">
             <h3 className="font-[var(--font-display)] text-lg md:text-xl font-bold text-[#23891A] mb-4 uppercase tracking-wide">
               Pros
             </h3>
@@ -42,8 +42,8 @@ export default function ProsCons() {
             </ul>
           </div>
 
-          {/* Cons Box (Purple Theme) */}
-          <div className="bg-[#FAF5FB] border border-[#ECC2F7] p-6 md:p-8">
+          {/* Cons Box */}
+          <div className="bg-white border border-[#DCE8D6] p-6 md:p-8">
             <h3 className="font-[var(--font-display)] text-lg md:text-xl font-bold text-[#B91FCC] mb-4 uppercase tracking-wide">
               Cons
             </h3>

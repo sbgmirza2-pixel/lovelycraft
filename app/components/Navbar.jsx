@@ -16,7 +16,7 @@ export default function Navbar() {
           <div className="w-10 h-10 rounded-none overflow-hidden border-2 border-[#15251B] bg-white shrink-0">
             <Image src="/logo.jpg" alt="Lovely Craft" width={40} height={40} className="object-cover w-full h-full" />
           </div>
-          <span>Lovely Craft</span>
+        
         </Link>
 
         {/* Desktop Navigation */}
