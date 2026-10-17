@@ -15,7 +15,8 @@ export default function SectionTabs() {
     { id: 'install', label: 'Step-by-step installation guide' },
     { id: 'safety', label: 'Safety and security guidelines' },
     { id: 'who-should-try', label: 'Who should try Lovely Craft APK?' },
-    { id: 'faq', label: 'Frequently asked questions' }
+    { id: 'faq', label: 'Frequently asked questions' },
+    { id: 'how-to-play', label: 'How to play Lovely Craft APK on Windows or PC' }
   ];
 
   const appInfoData = [

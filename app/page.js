@@ -12,6 +12,7 @@ import Safety from "./components/Safety";
 import WhoShouldTry from "./components/WhoShouldTry";
 import Conclusion from "./components/Conclusion";
 import Faq from "./components/Faq";
+import HowToPlay from "./components/HowToPlay";
 import Footer from "./components/Footer";
 
 export default function Home() {
@@ -33,6 +34,9 @@ export default function Home() {
 
       <div id="checklist">
         <Checklist />
+      </div>
+       <div id="how-to-play">
+        <HowToPlay />
       </div>
 
     
