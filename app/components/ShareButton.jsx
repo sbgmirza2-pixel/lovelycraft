@@ -50,7 +50,7 @@ export default function ShareButton() {
   return (
     <div className="relative inline-block" ref={menuRef}>
       <div 
-        className="flex items-center gap-2 p-1.5 rounded-full bg-white/90 backdrop-blur-md border border-[#DCE8D6] shadow-[0_8px_20px_rgba(21,37,27,0.08)] transition-all duration-300 ease-out"
+        className="flex items-center gap-2 p-1.5 rounded-full bg-white/95 backdrop-blur-md border border-[#DCE8D6] shadow-[0_8px_20px_rgba(21,37,27,0.08)] transition-all duration-300 ease-out"
       >
         {/* Toggle Button */}
         <button
@@ -68,9 +68,9 @@ export default function ShareButton() {
           </svg>
         </button>
 
-        {/* Social Icons Strip */}
+        {/* Social Icons Strip (Scrollbar and overflow lines removed completely) */}
         {isOpen && (
-          <div className="flex items-center gap-2 pr-1 animate-fadeIn flex-nowrap overflow-x-auto no-scrollbar">
+          <div className="flex items-center gap-2 pr-1 animate-fadeIn flex-nowrap">
             {/* WhatsApp */}
             <button
               type="button"
@@ -106,9 +106,6 @@ export default function ShareButton() {
                 <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
               </svg>
             </button>
-
-         
-
 
             {/* Pinterest */}
             <button

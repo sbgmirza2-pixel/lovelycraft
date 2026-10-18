@@ -24,11 +24,12 @@ export default function Navbar() {
           <Link href="/" className="px-3 py-2 text-[#51655A] no-underline font-semibold text-[0.95rem] rounded-lg hover:text-[#15251B] hover:bg-[#E5F5DC] transition-colors">
             Home
           </Link>
-          <Link href="#faq" className="px-3 py-2 text-[#51655A] no-underline font-semibold text-[0.95rem] rounded-lg hover:text-[#15251B] hover:bg-[#E5F5DC] transition-colors">
-            FAQs
-          </Link>
+         
           <Link href="/blogs" className="px-3 py-2 text-[#51655A] no-underline font-semibold text-[0.95rem] rounded-lg hover:text-[#15251B] hover:bg-[#E5F5DC] transition-colors">
             Blogs
+          </Link>
+           <Link href="#faq" className="px-3 py-2 text-[#51655A] no-underline font-semibold text-[0.95rem] rounded-lg hover:text-[#15251B] hover:bg-[#E5F5DC] transition-colors">
+            FAQs
           </Link>
           
           {/* Download Button */}

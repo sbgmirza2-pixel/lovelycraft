@@ -1,11 +1,6 @@
 'use client';
 
-import { useState, useEffect, useRef } from 'react';
-
 export default function TableOfContents() {
-  const [isOpen, setIsOpen] = useState(false);
-  const dropdownRef = useRef(null);
-
   const tocItems = [
     { id: 'about', label: 'About Lovely Craft APK' },
     { id: 'features', label: 'Key Features of Lovely Craft' },
@@ -15,68 +10,37 @@ export default function TableOfContents() {
     { id: 'safety', label: 'Safety and security guidelines' },
     { id: 'who-should-try', label: 'Who should try Lovely Craft APK?' },
     { id: 'faq', label: 'Frequently asked questions' },
-    { id: 'how-to-play', label: 'How to play Lovely Craft APK on Windows or PC' }
+    { id: 'how-to-play', label: 'How to play Lovely Craft APK on Windows or PC' },
   ];
 
-  useEffect(() => {
-    function handleClickOutside(event) {
-      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
-        setIsOpen(false);
-      }
-    }
-    document.addEventListener('mousedown', handleClickOutside);
-    return () => document.removeEventListener('mousedown', handleClickOutside);
-  }, []);
-
   const scrollToSection = (id) => {
-    setIsOpen(false);
-    const element = document.getElementById(id);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
+    document.getElementById(id)?.scrollIntoView({ behavior: 'smooth', block: 'start' });
   };
 
   return (
-    <div className="relative inline-block text-left z-30 my-4" ref={dropdownRef}>
-      <button
-        type="button"
-        onClick={() => setIsOpen(!isOpen)}
-        className="inline-flex items-center gap-2 px-5 py-3 font-[var(--font-display)] font-extrabold text-sm md:text-base text-[#15251B] bg-white border border-[#DCE8D6] rounded-none shadow-[2px_2px_0_rgba(21,37,27,0.08)] hover:bg-[#E5F5DC] transition-all cursor-pointer"
-      >
-        <span>Table of Contents</span>
-        <svg
-          className={`w-4 h-4 text-[#23891A] transform transition-transform duration-200 ${
-            isOpen ? 'rotate-180' : 'rotate-0'
-          }`}
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="3"
-          viewBox="0 0 24 24"
-        >
-          <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
-        </svg>
-      </button>
-
-      {isOpen && (
-        <div className="absolute left-0 mt-2 w-80 md:w-[420px] bg-white border border-[#DCE8D6] shadow-[4px_4px_0_rgba(21,37,27,0.1)] rounded-none p-3 z-50">
-          <ul className="list-none m-0 p-0 flex flex-col gap-1.5">
-            {tocItems.map((item, index) => (
-              <li key={index}>
-                <button
-                  type="button"
-                  onClick={() => scrollToSection(item.id)}
-                  className="w-full text-left flex items-center gap-2.5 p-2 hover:bg-[#F5F9F1] transition-colors cursor-pointer group rounded-none border-0 bg-transparent"
-                >
-                  <span className="font-bold text-[#B91FCC] text-base leading-none group-hover:scale-125 transition-transform">.</span>
-                  <span className="font-[var(--font-body)] text-xs md:text-sm font-semibold text-[#51655A] leading-snug group-hover:text-[#15251B] transition-colors">
-                    {item.label}
-                  </span>
-                </button>
-              </li>
-            ))}
-          </ul>
-        </div>
-      )}
-    </div>
+    <nav
+      aria-label="Table of contents"
+      className="my-5 w-full border border-[#DCE8D6] bg-white p-4 md:p-5 shadow-[3px_3px_0_rgba(21,37,27,0.06)]"
+    >
+      <h2 className="mb-3 border-b border-[#E5EDE0] pb-3 font-[var(--font-display)] text-base font-extrabold text-[#15251B] md:text-lg">
+        Table of Contents
+      </h2>
+      <ul className="m-0 grid list-none grid-cols-1 gap-1 p-0 md:grid-cols-2">
+        {tocItems.map((item) => (
+          <li key={item.id}>
+            <button
+              type="button"
+              onClick={() => scrollToSection(item.id)}
+              className="group flex w-full items-start gap-2.5 border-0 bg-transparent p-2 text-left transition-colors hover:bg-[#F5F9F1]"
+            >
+              <span className="mt-0.5 text-base font-bold leading-none text-[#B91FCC]">▪</span>
+              <span className="font-[var(--font-body)] text-xs font-semibold leading-snug text-[#51655A] transition-colors group-hover:text-[#15251B] md:text-sm">
+                {item.label}
+              </span>
+            </button>
+          </li>
+        ))}
+      </ul>
+    </nav>
   );
 }

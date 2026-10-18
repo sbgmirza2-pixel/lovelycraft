@@ -1,74 +1,93 @@
 export default function HowToPlay() {
+  const windowsSteps = [
+    "Go to the official Lovely Craft game page.",
+    "Download Windows version.",
+    "Click the file and choose Extract All.",
+    "Open the folder.",
+    "Find the game’s .exe file.",
+    "Double-click it to start playing."
+  ];
+
+  const pcSteps = [
+    "Install an Android emulator like BlueStacks.",
+    "Download the Lovely Craft app from a reliable source.",
+    "Run the emulator on your PC.",
+    "Install the APK (if available).",
+    "Choose the downloaded APK file.",
+    "Wait till installation is complete.",
+    "Open the Lovely Craft emulator and enjoy the game."
+  ];
+
   return (
-    <section className="py-12 bg-white border-b border-[#DCE8D6]" id="how-to-play">
-      <div className="max-w-[1120px] mx-auto px-4 flex flex-col gap-8">
+    <section className="py-16 bg-white border-b border-[#DCE8D6]" id="how-to-play">
+      <div className="max-w-[1120px] mx-auto px-4 flex flex-col gap-10">
         
         {/* Section Heading */}
-        <h2 className="text-2xl md:text-3xl font-[var(--font-display)] font-extrabold text-[#15251B] m-0">
-          How to play Lovely Craft APK on Windows or PC
-        </h2>
+        <div className="flex flex-col gap-2">
+          <div className="flex items-center gap-2">
+            <span className="w-2.5 h-2.5 bg-[#23891A] inline-block rounded-none"></span>
+            <span className="font-[var(--font-display)] text-xs md:text-sm font-bold tracking-wider text-[#23891A] uppercase">
+              GAMEPLAY GUIDE
+            </span>
+          </div>
+          <h2 className="text-2xl md:text-3xl font-[var(--font-display)] font-extrabold text-[#15251B] m-0">
+            How to play Lovely Craft APK on Windows or PC
+          </h2>
+          <p className="font-[var(--font-body)] text-[#51655A] text-sm md:text-base m-0">
+            Below are some tips to play Lovely Craft on Windows or PC:
+          </p>
+        </div>
 
-        <p className="font-[var(--font-body)] text-[#51655A] text-sm md:text-base m-0 leading-relaxed">
-          Below are some tips to play Lovely Craft on Windows or PC:
-        </p>
-
-        {/* Grid Layout for Windows & PC */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        {/* Without Box Stacked Layout */}
+        <div className="flex flex-col gap-10">
           
-          {/* Windows Version Card */}
-          <div className="bg-white border border-[#DCE8D6] p-6 md:p-8 rounded-none shadow-[2px_2px_0_rgba(21,37,27,0.04)]">
-            <h3 className="font-[var(--font-display)] text-lg md:text-xl font-bold text-[#23891A] mb-4 uppercase tracking-wide">
+          {/* Windows Version */}
+          <div className="flex flex-col gap-4">
+            <h3 className="font-[var(--font-display)] text-lg md:text-xl font-bold text-[#15251B] uppercase tracking-wide border-b border-[#DCE8D6] pb-2 m-0">
               Play Lovely Craft on Windows
             </h3>
+            
             <ul className="list-disc list-inside m-0 p-0 flex flex-col gap-2.5">
-              <li className="font-[var(--font-body)] text-[#15251B] text-sm md:text-base">
-                Go to the official Lovely Craft game page.
-              </li>
-              <li className="font-[var(--font-body)] text-[#15251B] text-sm md:text-base">
-                Download Windows version.
-              </li>
-              <li className="font-[var(--font-body)] text-[#15251B] text-sm md:text-base">
-                Click the file and choose Extract All.
-              </li>
-              <li className="font-[var(--font-body)] text-[#15251B] text-sm md:text-base">
-                Open the folder.
-              </li>
-              <li className="font-[var(--font-body)] text-[#15251B] text-sm md:text-base">
-                Find the game’s <code className="bg-[#F5F9F1] px-1.5 py-0.5 text-xs font-mono text-[#23891A]">.exe</code> file.
-              </li>
-              <li className="font-[var(--font-body)] text-[#15251B] text-sm md:text-base">
-                Double-click it to start playing.
-              </li>
+              {windowsSteps.map((step, index) => (
+                <li key={index} className="font-[var(--font-body)] text-[#51655A] text-sm md:text-base">
+                  {step.includes('.exe') ? (
+                    <>
+                      Find the game’s <code className="bg-[#F5F9F1] px-1.5 py-0.5 text-xs font-mono text-[#23891A] border border-[#DCE8D6]">.exe</code> file.
+                    </>
+                  ) : (
+                    step
+                  )}
+                </li>
+              ))}
             </ul>
           </div>
 
-          {/* PC / Emulator Version Card */}
-          <div className="bg-white border border-[#DCE8D6] p-6 md:p-8 rounded-none shadow-[2px_2px_0_rgba(21,37,27,0.04)]">
-            <h3 className="font-[var(--font-display)] text-lg md:text-xl font-bold text-[#23891A] mb-4 uppercase tracking-wide">
+          {/* PC / Emulator Version */}
+          <div className="flex flex-col gap-4">
+            <h3 className="font-[var(--font-display)] text-lg md:text-xl font-bold text-[#15251B] uppercase tracking-wide border-b border-[#DCE8D6] pb-2 m-0">
               Play Lovely Craft APK on PC
             </h3>
+            
             <ul className="list-disc list-inside m-0 p-0 flex flex-col gap-2.5">
-              <li className="font-[var(--font-body)] text-[#15251B] text-sm md:text-base">
-                Install an Android emulator like BlueStacks.
-              </li>
-              <li className="font-[var(--font-body)] text-[#15251B] text-sm md:text-base">
-                Download the Lovely Craft app from a reliable source.
-              </li>
-              <li className="font-[var(--font-body)] text-[#15251B] text-sm md:text-base">
-                Run the emulator on your PC.
-              </li>
-              <li className="font-[var(--font-body)] text-[#15251B] text-sm md:text-base">
-                Install the APK (if available).
-              </li>
-              <li className="font-[var(--font-body)] text-[#15251B] text-sm md:text-base">
-                Choose the downloaded APK file.
-              </li>
-              <li className="font-[var(--font-body)] text-[#15251B] text-sm md:text-base">
-                Wait till installation is complete.
-              </li>
-              <li className="font-[var(--font-body)] text-[#15251B] text-sm md:text-base">
-                Open the Lovely Craft emulator and enjoy the game.
-              </li>
+              {pcSteps.map((step, index) => (
+                <li key={index} className="font-[var(--font-body)] text-[#51655A] text-sm md:text-base">
+                  {step.includes('BlueStacks') ? (
+                    <>
+                      Install an Android emulator like{' '}
+                      <a 
+                        href="https://www.bluestacks.com" 
+                        target="_blank" 
+                        rel="noopener noreferrer" 
+                        className="text-[#23891A] font-bold underline hover:text-[#1A6D13] transition-colors"
+                      >
+                        BlueStacks
+                      </a>.
+                    </>
+                  ) : (
+                    step
+                  )}
+                </li>
+              ))}
             </ul>
           </div>
 

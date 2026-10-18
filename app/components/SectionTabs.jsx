@@ -91,7 +91,7 @@ export default function SectionTabs() {
 
             {/* Dropdown Menu */}
             {isOpen && (
-              <div className="absolute left-0 mt-2 w-80 md:w-[440px] bg-white border border-[#DCE8D6] shadow-[0_10px_25px_rgba(21,37,27,0.08)] rounded-none p-2 max-h-[380px] overflow-y-auto z-50">
+              <div className="absolute left-0 mt-2 w-80 md:w-[440px] bg-white border border-[#DCE8D6] shadow-[0_10px_25px_rgba(21,37,27,0.08)] rounded-none p-2  overflow-y-auto z-50">
                 <ul className="list-none m-0 p-0 flex flex-col gap-1">
                   {tocItems.map((item, index) => (
                     <li key={index}>
