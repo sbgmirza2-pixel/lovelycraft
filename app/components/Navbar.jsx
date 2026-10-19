@@ -28,13 +28,13 @@ export default function Navbar() {
           <Link href="/blogs" className="px-3 py-2 text-[#51655A] no-underline font-semibold text-[0.95rem] rounded-lg hover:text-[#15251B] hover:bg-[#E5F5DC] transition-colors">
             Blogs
           </Link>
-           <Link href="#faq" className="px-3 py-2 text-[#51655A] no-underline font-semibold text-[0.95rem] rounded-lg hover:text-[#15251B] hover:bg-[#E5F5DC] transition-colors">
+           <Link href="/faqs" className="px-3 py-2 text-[#51655A] no-underline font-semibold text-[0.95rem] rounded-lg hover:text-[#15251B] hover:bg-[#E5F5DC] transition-colors">
             FAQs
           </Link>
           
           {/* Download Button */}
           <a 
-            href="#install" 
+            href="/download" 
             className="ml-2 px-5 py-2.5 text-white font-bold text-[0.95rem] no-underline rounded-none border border-[#1E8A17]/40 shadow-[0_4px_12px_rgba(35,137,26,0.25)] transition-all inline-block"
             style={{ background: 'linear-gradient(135deg, #34BC24, #1E8A17)' }}
           >
@@ -70,7 +70,7 @@ export default function Navbar() {
             Home
           </Link>
           <Link 
-            href="#faq" 
+            href="/faqs" 
             onClick={() => setIsMobileMenuOpen(false)}
             className="font-semibold text-base text-[#51655A] hover:text-[#15251B] py-2 no-underline border-b border-[#F0F5EC]"
           >
@@ -86,7 +86,7 @@ export default function Navbar() {
           
           {/* Download Button in Mobile Menu */}
           <a
-            href="#install"
+            href="/download"
             onClick={() => setIsMobileMenuOpen(false)}
             className="mt-2 w-full text-center px-5 py-3 text-white font-bold text-base no-underline rounded-none border border-[#1E8A17]/40 shadow-[0_4px_12px_rgba(35,137,26,0.25)] block"
             style={{ background: 'linear-gradient(135deg, #34BC24, #1E8A17)' }}

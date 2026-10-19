@@ -14,6 +14,7 @@ import Conclusion from "./components/Conclusion";
 import Faq from "./components/Faq";
 import HowToPlay from "./components/HowToPlay";
 import Footer from "./components/Footer";
+import Screenshots from "./components/Screenshots";
 
 export default function Home() {
   return (
@@ -37,6 +38,9 @@ export default function Home() {
       </div>
        <div id="how-to-play">
         <HowToPlay />
+      </div>
+      <div id="screenshots">
+        <Screenshots />
       </div>
 
     
