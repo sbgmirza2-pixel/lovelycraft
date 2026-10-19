@@ -26,7 +26,7 @@ export default function Screenshots() {
               VISUAL PREVIEW
             </span>
           </div>
-          <h2 className="section-title">Lovely Craft APK Screenshots</h2>
+          <h2 className="section-title"> Screenshots</h2>
         </div>
 
         {/* Horizontal Scrolling Track */}
