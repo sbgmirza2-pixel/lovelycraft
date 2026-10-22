@@ -36,9 +36,44 @@ export default async function SingleBlogPage({ params }) {
   }
 
   const blog = blogsData[blogIndex];
-
-  // Interlinking: Agla blog find karna
   const nextBlog = blogsData[(blogIndex + 1) % blogsData.length];
+
+  // Markdown Links [Text](URL) Parser using React Link Component
+  const parseMarkdownLinks = (text) => {
+    if (!text || typeof text !== "string") return text;
+
+    const regex = /\[([^\]]+)\]\(([^)]+)\)/g;
+    const parts = [];
+    let lastIndex = 0;
+    let match;
+
+    while ((match = regex.exec(text)) !== null) {
+      if (match.index > lastIndex) {
+        parts.push(text.substring(lastIndex, match.index));
+      }
+
+      const linkText = match[1];
+      const linkUrl = match[2];
+
+      parts.push(
+        <Link
+          key={match.index}
+          href={linkUrl}
+          className="text-[#23891A] font-bold underline hover:text-[#15251B] transition-colors inline"
+        >
+          {linkText}
+        </Link>
+      );
+
+      lastIndex = regex.lastIndex;
+    }
+
+    if (lastIndex < text.length) {
+      parts.push(text.substring(lastIndex));
+    }
+
+    return parts.length > 0 ? parts : text;
+  };
 
   const renderTextWithBullets = (text) => {
     if (!text || typeof text !== "string") return null;
@@ -48,14 +83,14 @@ export default async function SingleBlogPage({ params }) {
         return (
           <ul key={pIdx} className="list-disc pl-6 my-4 flex flex-col gap-2 text-[#51655A] text-base md:text-lg">
             {listItems.map((item, i) => (
-              <li key={i}>{item.replace("- ", "")}</li>
+              <li key={i}>{parseMarkdownLinks(item.replace("- ", ""))}</li>
             ))}
           </ul>
         );
       }
       return (
         <p key={pIdx} className="text-[#51655A] text-base md:text-lg leading-relaxed mb-4">
-          {paragraph}
+          {parseMarkdownLinks(paragraph)}
         </p>
       );
     });
@@ -86,16 +121,17 @@ export default async function SingleBlogPage({ params }) {
             </h2>
 
             <div className="w-16 h-1 bg-[#23891A] mb-6"></div>
-{/* Banner Image - Square Aspect Ratio for Complete Art Fit */}
-<div className="w-full max-w-[550px] aspect-square mx-auto relative mb-8 overflow-hidden bg-[#F5F9F1] border border-[#23891A]/30">
-  <Image
-    src="/blog-img.webp"
-    alt={blog.title}
-    fill
-    sizes="(max-width: 800px) 100vw, 550px"
-    className="object-cover object-center"
-  />
-</div>
+
+            {/* Banner Image */}
+            <div className="w-full max-w-[550px] aspect-square mx-auto relative mb-8 overflow-hidden bg-[#F5F9F1] border border-[#23891A]/30 shadow-[0_0_15px_rgba(35,137,26,0.1)]">
+              <Image
+                src="/featured-image-of-lovely-craft.webp"
+                alt={blog.title}
+                fill
+                sizes="(max-width: 800px) 100vw, 550px"
+                className="object-cover object-center"
+              />
+            </div>
 
             {/* Intro Content */}
             {blog.content?.intro && (
@@ -131,7 +167,7 @@ export default async function SingleBlogPage({ params }) {
                             <tr key={rIdx} className={rIdx % 2 === 0 ? "bg-[#F5F9F1]/50" : "bg-white"}>
                               {row.map((td, tdIdx) => (
                                 <td key={tdIdx} className="p-3 text-sm md:text-base text-[#51655A] border-t border-[#DCE8D6]">
-                                  {td}
+                                  {parseMarkdownLinks(td)}
                                 </td>
                               ))}
                             </tr>
@@ -162,7 +198,7 @@ export default async function SingleBlogPage({ params }) {
               </Link>
             </div>
 
-            {/* Back to All Blogs Button (Placed at Bottom) */}
+            {/* Back to All Blogs Button */}
             <div className="mt-8 text-center">
               <Link 
                 href="/blogs" 

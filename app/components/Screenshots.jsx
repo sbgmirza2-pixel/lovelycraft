@@ -5,11 +5,9 @@ import Image from "next/image";
 export default function Screenshots() {
   const screenshots = [
     { src: "/screenshot-1.webp", alt: "Lovely Craft Gameplay Screenshot 1" },
-     { src: "/screenshot-4.webp", alt: "Lovely Craft Gameplay Screenshot 4" },
-   
+    { src: "/screenshot-4.webp", alt: "Lovely Craft Gameplay Screenshot 4" },
     { src: "/screenshot-3.webp", alt: "Lovely Craft Gameplay Screenshot 3" },
-     { src: "/screenshot-2.webp", alt: "Lovely Craft Gameplay Screenshot 2" },
-   
+    { src: "/screenshot-2.webp", alt: "Lovely Craft Gameplay Screenshot 2" },
   ];
 
   return (
@@ -46,8 +44,6 @@ export default function Screenshots() {
                     loading={index === 0 ? "eager" : "lazy"}
                     className="screenshot-img"
                   />
-                  {/* Shiny Glaze Layer */}
-                  <div className="shine-layer"></div>
                   <div className="image-overlay"></div>
                 </div>
               </div>
@@ -194,36 +190,6 @@ export default function Screenshots() {
 
         .screenshot-card:hover .screenshot-img {
           transform: scale(1.04);
-        }
-
-        /* Shine Layer Animation */
-        .shine-layer {
-          position: absolute;
-          top: 0;
-          left: -150%;
-          width: 50%;
-          height: 100%;
-          background: linear-gradient(
-            120deg,
-            transparent,
-            rgba(255, 255, 255, 0.3),
-            transparent
-          );
-          pointer-events: none;
-          transform: skewX(-20deg);
-        }
-
-        .screenshot-card:hover .shine-layer {
-          animation: shineEffect 0.8s ease-in-out forwards;
-        }
-
-        @keyframes shineEffect {
-          0% {
-            left: -150%;
-          }
-          100% {
-            left: 150%;
-          }
         }
 
         .image-overlay {

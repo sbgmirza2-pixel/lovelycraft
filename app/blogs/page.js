@@ -43,7 +43,7 @@ export default function BlogsPage() {
               {/* Image Box - Proportional Aspect Fit */}
               <div className="w-full lg:w-1/2 aspect-square md:aspect-[4/3] lg:aspect-square relative overflow-hidden bg-[#F5F9F1] border-b lg:border-b-0 lg:border-r border-[#DCE8D6]">
                 <Image
-                  src="/blog-img.webp"
+                  src="/featured-image-of-lovely-craft.webp"
                   alt={featuredBlog.title}
                   fill
                   sizes="(max-width: 1024px) 100vw, 50vw"
@@ -91,7 +91,7 @@ export default function BlogsPage() {
                 {/* Banner Thumbnail - Square Aspect for perfect poster visibility */}
                 <div className="w-full aspect-video md:aspect-[4/3] relative overflow-hidden bg-[#F5F9F1] border border-[#DCE8D6] mb-5">
                   <Image
-                    src="/blog-img.webp"
+                    src="/featured-image-of-lovely-craft.webp"
                     alt={blog.title}
                     fill
                     sizes="(max-width: 768px) 100vw, 50vw"

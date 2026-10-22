@@ -28,7 +28,7 @@ export default function Hero() {
             <a 
               className="inline-flex items-center gap-2.5 px-6 py-3 font-[var(--font-body)] font-bold text-sm text-white no-underline rounded-none border border-[#1E8A17]/40 shadow-[0_4px_12px_rgba(35,137,26,0.25)] hover:shadow-[0_6px_16px_rgba(35,137,26,0.35)] transition-all"
               style={{ background: 'linear-gradient(135deg, #34BC24, #1E8A17)' }}
-              href="#download"
+              href="/download"
             >
            
               Download Lovely Craft

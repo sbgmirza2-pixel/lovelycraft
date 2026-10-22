@@ -16,7 +16,6 @@ export default function Navbar() {
           <div className="w-11 h-11 rounded-none overflow-hidden border-2 border-[#15251B] bg-white shrink-0">
             <Image src="/logo.jpg" alt="Lovely Craft" width={40} height={40} className="object-cover w-full h-full" />
           </div>
-        
         </Link>
 
         {/* Desktop Navigation */}
@@ -32,12 +31,15 @@ export default function Navbar() {
             FAQs
           </Link>
           
-          {/* Download Button */}
+          {/* Download Button with Icon */}
           <a 
             href="/download" 
-            className="ml-2 px-5 py-2.5 text-white font-bold text-[0.95rem] no-underline rounded-none border border-[#1E8A17]/40 shadow-[0_4px_12px_rgba(35,137,26,0.25)] transition-all inline-block"
+            className="ml-2 px-5 py-2.5 text-white font-bold text-[0.95rem] no-underline rounded-none border border-[#1E8A17]/40 shadow-[0_4px_12px_rgba(35,137,26,0.25)] transition-all inline-flex items-center gap-2"
             style={{ background: 'linear-gradient(135deg, #34BC24, #1E8A17)' }}
           >
+            <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+            </svg>
             Download APK
           </a>
         </nav>
@@ -84,13 +86,16 @@ export default function Navbar() {
             Blogs
           </Link>
           
-          {/* Download Button in Mobile Menu */}
+          {/* Download Button in Mobile Menu with Icon */}
           <a
             href="/download"
             onClick={() => setIsMobileMenuOpen(false)}
-            className="mt-2 w-full text-center px-5 py-3 text-white font-bold text-base no-underline rounded-none border border-[#1E8A17]/40 shadow-[0_4px_12px_rgba(35,137,26,0.25)] block"
+            className="mt-2 w-full text-center px-5 py-3 text-white font-bold text-base no-underline rounded-none border border-[#1E8A17]/40 shadow-[0_4px_12px_rgba(35,137,26,0.25)] inline-flex items-center justify-center gap-2"
             style={{ background: 'linear-gradient(135deg, #34BC24, #1E8A17)' }}
           >
+            <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+            </svg>
             Download APK
           </a>
         </div>

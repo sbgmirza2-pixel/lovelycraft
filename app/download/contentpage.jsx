@@ -114,15 +114,18 @@ export default function DownloadContentPage() {
                   Download the latest version and start your adventure.
                 </p>
 
-                {/* Clean Button (Without Arrow Icon) */}
+                {/* Download Button with Icon */}
                 <a
                   href="#download"
                   onClick={(e) => {
                     e.preventDefault();
                     alert("Your Lovely Craft APK download has started!");
                   }}
-                  className="group relative inline-flex items-center justify-center w-full sm:w-auto py-4 px-12 bg-[#23891A] hover:bg-[#1f7917] text-white font-[var(--font-display)] font-extrabold text-lg rounded-none transition-all duration-300 shadow-[0_0_20px_rgba(35,137,26,0.5)] hover:shadow-[0_0_30px_rgba(35,137,26,0.8)] cursor-pointer uppercase tracking-wider relative z-10"
+                  className="group relative inline-flex items-center justify-center gap-2.5 w-full sm:w-auto py-4 px-10 bg-[#23891A] hover:bg-[#1f7917] text-white font-[var(--font-display)] font-extrabold text-lg rounded-none transition-all duration-300 shadow-[0_0_20px_rgba(35,137,26,0.5)] hover:shadow-[0_0_30px_rgba(35,137,26,0.8)] cursor-pointer uppercase tracking-wider relative z-10"
                 >
+                  <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+                  </svg>
                   Download Lovely Craft
                 </a>
 
@@ -142,10 +145,11 @@ export default function DownloadContentPage() {
             <ol className="m-0 p-0 flex flex-col gap-4 font-[var(--font-body)] text-[#15251B]">
               {steps.map((stepText, idx) => (
                 <li key={idx} className="flex items-start gap-4">
-                  <span className="font-mono text-xs font-bold text-[#23891A] bg-[#F5F9F1] border border-[#DCE8D6] w-7 h-7 flex items-center justify-center shrink-0 rounded-none mt-0.5">
+                  {/* Made step numbers slightly larger (w-9 h-9, text-sm) */}
+                  <span className="font-mono text-sm font-bold text-[#23891A] bg-[#F5F9F1] border border-[#DCE8D6] w-9 h-9 flex items-center justify-center shrink-0 rounded-none mt-0.5 shadow-sm">
                     0{idx + 1}
                   </span>
-                  <p className="text-sm md:text-base leading-relaxed m-0 pt-0.5">
+                  <p className="text-sm md:text-base leading-relaxed m-0 pt-1.5">
                     {stepText}
                   </p>
                 </li>

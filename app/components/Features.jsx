@@ -37,7 +37,7 @@ export default function Features() {
             Features
           </span>
           <h2 className="text-[clamp(1.75rem,3.6vw,2.4rem)] font-[var(--font-display)] font-bold text-[#15251B] m-0">
-            Key features of Lovely Craft APK
+            Key features of Lovely Craft Piston Trap 
           </h2>
           <p className="font-[var(--font-body)] text-[#51655A] text-base m-0">
             Here are some features you should know if you are thinking of trying Lovely Craft APK.
