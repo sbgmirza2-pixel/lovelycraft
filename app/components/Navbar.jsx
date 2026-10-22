@@ -13,7 +13,7 @@ export default function Navbar() {
         
         {/* Brand / Logo */}
         <Link className="flex items-center gap-2.5 text-[#15251B] no-underline font-extrabold text-[1.2rem] tracking-tight" href="/">
-          <div className="w-10 h-10 rounded-none overflow-hidden border-2 border-[#15251B] bg-white shrink-0">
+          <div className="w-11 h-11 rounded-none overflow-hidden border-2 border-[#15251B] bg-white shrink-0">
             <Image src="/logo.jpg" alt="Lovely Craft" width={40} height={40} className="object-cover w-full h-full" />
           </div>
         
