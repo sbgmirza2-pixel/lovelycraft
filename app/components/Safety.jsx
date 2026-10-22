@@ -14,10 +14,10 @@ export default function Safety() {
         {/* Section Heading */}
         <div className="flex flex-col gap-2.5">
           <h2 className="text-2xl md:text-3xl font-[var(--font-display)] font-bold text-[#15251B] m-0">
-            Is Lovely Craft APK Safe to Use?
+            Is Lovely Craft Piston Trap Safe to Use?
           </h2>
           <p className="font-[var(--font-body)] text-[#51655A] text-sm md:text-base m-0 leading-relaxed max-w-3xl">
-            The safety of Lovely Craft APK depends on the source where you are downloading the APK. APK files are generally safe to use, but sometimes unofficial copies can change the original version. Take these simple precautions before you start the game:
+            The safety of Lovely Craft Piston Trap depends on the source where you are downloading the APK. APK files are generally safe to use, but sometimes unofficial copies can change the original version. Take these simple precautions before you start the game:
           </p>
         </div>
 

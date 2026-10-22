@@ -15,7 +15,7 @@ export default function Faq() {
       answer: "Yes. New mobs have been added with updates to the game, adding more things to discover in the game world."
     },
     {
-      question: "Does Lovely Craft APK have in-game achievements?",
+      question: "Does Lovely Craft Piston Trap have in-game achievements?",
       answer: "Yes, Lovely Craft APK has achievements that players can unlock by completing tasks and goals in the game. But the exact achievements are not confirmed."
     }
   ];

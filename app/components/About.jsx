@@ -10,7 +10,7 @@ export default function About() {
             About the game
           </span>
           <h2 className="text-[clamp(1.75rem,3.6vw,2.4rem)] font-[var(--font-display)] font-bold text-[#15251B] m-0 leading-tight">
-            What is Lovely Craft APK?
+            What is Lovely Craft Piston Trap?
           </h2>
         </div>
 

@@ -1,6 +1,6 @@
 export default function AppInfo() {
   const appData = [
-    { label: "App Name", value: "Lovely Craft" },
+    { label: "App Name", value: "Lovely Craft Piston Trap" },
     { label: "Developer", value: "Crime" },
     { label: "Version", value: "V0.2.999" },
     { label: "File Size", value: "1500 MB" },

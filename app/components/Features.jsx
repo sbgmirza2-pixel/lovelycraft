@@ -2,7 +2,7 @@ export default function Features() {
   const featuresList = [
     {
       title: "Piston-based building and mechanics",
-      desc: "Lovely Craft is a game about the mechanics of pistons. It is not a usual sandbox game. Players can replace blocks and add new mechanisms, so building is more interactive and structures are never fixed. You can play with different layouts and change the designs to see how things work in the game environment."
+      desc: "Lovely Craft Piston Trap is a game about the mechanics of pistons. It is not a usual sandbox game. Players can replace blocks and add new mechanisms, so building is more interactive and structures are never fixed. You can play with different layouts and change the designs to see how things work in the game environment."
     },
     {
       title: "Voxel-style world and graphics",

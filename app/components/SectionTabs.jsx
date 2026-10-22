@@ -20,7 +20,7 @@ export default function SectionTabs() {
   ];
 
   const appInfoData = [
-    { label: "APP NAME", value: "Lovely Craft" },
+    { label: "APP NAME", value: "Lovely Craft Piston Trap" },
     { label: "DEVELOPER", value: "Crime" },
     { label: "VERSION", value: "V0.2.999" },
     { label: "FILE SIZE", value: "1500 MB" },

@@ -2,7 +2,7 @@
 
 export default function TableOfContents() {
   const tocItems = [
-    { id: 'about', label: 'About Lovely Craft APK' },
+    { id: 'about', label: 'About Lovely Craft APK Piston Trap' },
     { id: 'features', label: 'Key Features of Lovely Craft' },
     { id: 'checklist', label: 'A practical checklist for installing Lovely Craft' },
     { id: 'pros-cons', label: 'Pros and cons of Lovely Craft APK' },

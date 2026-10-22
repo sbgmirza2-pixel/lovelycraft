@@ -5,9 +5,11 @@ import Image from "next/image";
 export default function Screenshots() {
   const screenshots = [
     { src: "/screenshot-1.webp", alt: "Lovely Craft Gameplay Screenshot 1" },
-    { src: "/screenshot-2.webp", alt: "Lovely Craft Gameplay Screenshot 2" },
+     { src: "/screenshot-4.webp", alt: "Lovely Craft Gameplay Screenshot 4" },
+   
     { src: "/screenshot-3.webp", alt: "Lovely Craft Gameplay Screenshot 3" },
-    { src: "/screenshot-4.webp", alt: "Lovely Craft Gameplay Screenshot 4" },
+     { src: "/screenshot-2.webp", alt: "Lovely Craft Gameplay Screenshot 2" },
+   
   ];
 
   return (
@@ -26,7 +28,7 @@ export default function Screenshots() {
               VISUAL PREVIEW
             </span>
           </div>
-          <h2 className="section-title"> Screenshots</h2>
+          <h2 className="section-title">Screenshots</h2>
         </div>
 
         {/* Horizontal Scrolling Track */}
