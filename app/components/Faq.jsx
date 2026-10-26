@@ -39,9 +39,7 @@ export default function Faq() {
             <h2 className="text-2xl md:text-3xl font-[var(--font-display)] font-extrabold text-[#15251B] m-0 leading-tight">
               Frequently Asked Questions
             </h2>
-            <p className="font-[var(--font-body)] text-[#51655A] text-sm md:text-base m-0 leading-relaxed">
-              Got questions about Lovely Craft APK? Find quick answers to common queries regarding gameplay, features, and compatibility.
-            </p>
+           
           </div>
 
           {/* Right Column: Accordion Items */}

@@ -9,12 +9,21 @@ export const metadata = {
   alternates: {
     canonical: "https://lovelycraftapk.org/dmca",
   },
-  openGraph: {
+    openGraph: {
     title: "DMCA Policy - Lovely Craft APK",
     description:
       "Submit copyright complaints and request a review of potentially infringing content published on our website.",
     url: "https://lovelycraftapk.org/dmca",
     siteName: "Lovely Craft APK",
+    images: [
+      {
+        url: "/logo.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Lovely Craft APK Gameplay Preview",
+      },
+    ],
+    locale: "en_US",
     type: "website",
   },
 };
@@ -60,10 +69,10 @@ export default function DMCAPage() {
               <div className="p-4 bg-[#F5F9F1] border-l-4 border-[#23891A] text-[#15251B] font-medium text-base md:text-lg">
                 Copyright Contact:{" "}
                 <a
-                  href="mailto:dmca@lovelycraftapk.org"
+                  href="mailto:admin@lovelycraftapk.org"
                   className="text-[#23891A] font-bold hover:underline"
                 >
-                  dmca@lovelycraftapk.org
+                  admin@lovelycraftapk.org
                 </a>
               </div>
 

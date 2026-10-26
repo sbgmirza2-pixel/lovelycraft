@@ -146,7 +146,7 @@ export default function DownloadContentPage() {
               {steps.map((stepText, idx) => (
                 <li key={idx} className="flex items-start gap-4">
                   {/* Made step numbers slightly larger (w-9 h-9, text-sm) */}
-                  <span className="font-mono text-sm font-bold text-[#23891A] bg-[#F5F9F1] border border-[#DCE8D6] w-9 h-9 flex items-center justify-center shrink-0 rounded-none mt-0.5 shadow-sm">
+                  <span className="font-mono text-sm font-bold text-[#23891A] bg-[#F5F9F1] border border-[#DCE8D6] w-8 h-8 flex items-center justify-center shrink-0 rounded-none mt-0.5 shadow-sm">
                     0{idx + 1}
                   </span>
                   <p className="text-sm md:text-base leading-relaxed m-0 pt-1.5">

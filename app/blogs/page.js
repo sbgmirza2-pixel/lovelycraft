@@ -10,6 +10,23 @@ export const metadata = {
   alternates: {
     canonical: "https://lovelycraftapk.org/blogs",
   },
+    openGraph: {
+    title: "Blogs - Lovely Craft APK",
+    description:
+      "Explore guides, trap tutorials, piston mechanics, and compatibility tips for Lovely Craft APK. ",
+    url: "https://lovelycraftapk.org/blogs",
+    siteName: "Lovely Craft APK",
+    images: [
+      {
+        url: "/logo.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Lovely Craft APK Gameplay Preview",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
 };
 
 export default function BlogsPage() {
@@ -29,7 +46,7 @@ export default function BlogsPage() {
           </h2>
           <div className="w-16 h-1 bg-[#23891A] mx-auto mb-4"></div>
           <p className="text-base md:text-lg text-[#51655A] max-w-[550px] mx-auto leading-relaxed">
-            Discover tips, trap designs, piston mechanics, and installation guides for Lovely Craft APK.
+            Explore Lovely Craft building ideas, creative trap designs, crafting tips, and simple gameplay guides to help you get more out of the game.c
           </p>
         </div>
 

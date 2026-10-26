@@ -1,3 +1,11 @@
+const SITE_URL = 'https://lovelycraftapk.org';
+export const metadata = {
+  title: "Lovely Craft - Download Latest APK V0.2.999 For Android (Features and Guide)",
+  description: "Explore Lovely Craft APK features, gameplay, piston mechanics, customization, requirements, safety tips, and everything you need to know before installing.",
+   alternates: {
+    canonical: SITE_URL,
+  },
+};
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import SectionTabs from "./components/SectionTabs";
@@ -17,8 +25,29 @@ import Footer from "./components/Footer";
 import Screenshots from "./components/Screenshots";
 
 export default function Home() {
+    const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Lovely Craft APK",
+    "operatingSystem": "ANDROID",
+    "applicationCategory": "GameApplication",
+    "softwareVersion": "0.2.999",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    },
+    "description": "Explore Lovely Craft APK features, gameplay, piston mechanics, customization, requirements, safety tips, and everything you need to know before installing.",
+  };
+
   return (
     <main className="min-h-screen bg-[#F5F9F1] text-[#15251B]">
+      
+  {/* Schema Markup (Structured Data) */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <Navbar />
       <Hero />
       <SectionTabs />

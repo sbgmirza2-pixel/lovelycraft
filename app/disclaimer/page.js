@@ -9,12 +9,21 @@ export const metadata = {
   alternates: {
     canonical: "https://lovelycraftapk.org/disclaimer",
   },
-  openGraph: {
+    openGraph: {
     title: "Disclaimer - Lovely Craft APK",
     description:
       "Read our disclaimer covering game information, APK downloads, third-party links, trademarks, and website responsibility.",
     url: "https://lovelycraftapk.org/disclaimer",
     siteName: "Lovely Craft APK",
+    images: [
+      {
+        url: "/logo.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Lovely Craft APK Gameplay Preview",
+      },
+    ],
+    locale: "en_US",
     type: "website",
   },
 };

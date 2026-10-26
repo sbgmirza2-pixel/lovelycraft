@@ -18,6 +18,22 @@ export async function generateMetadata({ params }) {
     alternates: {
       canonical: `https://lovelycraftapk.org/blogs/${blog.slug}`,
     },
+    openGraph: {
+      title: `${blog.title} - Lovely Craft APK`,
+      description: blog.description,
+      url: `https://lovelycraftapk.org/blogs/${blog.slug}`,
+      siteName: "Lovely Craft APK",
+      images: [
+        {
+          url: blog.image,
+          width: 1200,
+          height: 630,
+          alt: blog.title,
+        },
+      ],
+      locale: "en_US",
+      type: "article",
+    },
   };
 }
 

@@ -9,12 +9,21 @@ export const metadata = {
   alternates: {
     canonical: "https://lovelycraftapk.org/privacy-policy",
   },
-  openGraph: {
+   openGraph: {
     title: "Privacy Policy - Lovely Craft APK",
     description:
       "Read our privacy policy to understand how visitor information, cookies, and website data may be collected and used.",
     url: "https://lovelycraftapk.org/privacy-policy",
     siteName: "Lovely Craft APK",
+    images: [
+      {
+        url: "/logo.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Lovely Craft APK Gameplay Preview",
+      },
+    ],
+    locale: "en_US",
     type: "website",
   },
 };

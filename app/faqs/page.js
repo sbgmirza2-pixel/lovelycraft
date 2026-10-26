@@ -10,12 +10,21 @@ export const metadata = {
   alternates: {
     canonical: "https://lovelycraftapk.org/faqs",
   },
-  openGraph: {
+    openGraph: {
     title: "Frequently Asked Questions - Lovely Craft APK",
     description:
       "Find answers about Lovely Craft APK, Android installation, compatibility, updates, and common download problems.",
     url: "https://lovelycraftapk.org/faqs",
     siteName: "Lovely Craft APK",
+    images: [
+      {
+        url: "/logo.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Lovely Craft APK Gameplay Preview",
+      },
+    ],
+    locale: "en_US",
     type: "website",
   },
 };
@@ -57,9 +66,7 @@ export default function FAQsPage() {
           <h2 className="text-[clamp(2.2rem,5vw,3.5rem)] font-[var(--font-display)] font-extrabold text-[#15251B] tracking-tight mb-3">
             Frequently Asked Questions
           </h2>
-          <p className="font-[var(--font-body)] text-base md:text-lg text-[#51655A] leading-relaxed">
-            Find answers about Lovely Craft APK, Android installation, compatibility, updates, and common download problems.
-          </p>
+     
         </div>
 
         {/* FAQs Accordion Client Component */}

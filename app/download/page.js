@@ -4,13 +4,23 @@ export const metadata = {
   title: "Download Lovely Craft APK Latest Version - Android & PC",
   description: "Download the latest version of Lovely Craft APK safely. Follow our easy guide to install and play the game on Android devices or PC.",
   alternates: {
-    canonical: "https://yourdomain.com/download", // Apna domain yahan update kar lein
+    canonical: "https://lovelycraftapk.org/download",
   },
-  openGraph: {
-    title: "Download Lovely Craft APK Latest Version",
-    description: "Get the secure APK file for Lovely Craft and start building your block world today.",
-    url: "https://yourdomain.com/download",
+   openGraph: {
+    title: "Download Lovely Craft APK Latest Version - Android & PC",
+    description:
+      "Download the latest version of Lovely Craft APK safely. Follow our easy guide to install and play the game on Android devices or PC.",
+    url: "https://lovelycraftapk.org/download",
     siteName: "Lovely Craft APK",
+    images: [
+      {
+        url: "/logo.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Lovely Craft APK Gameplay Preview",
+      },
+    ],
+    locale: "en_US",
     type: "website",
   },
 };

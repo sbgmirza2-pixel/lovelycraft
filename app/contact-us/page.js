@@ -9,12 +9,21 @@ export const metadata = {
   alternates: {
     canonical: "https://lovelycraftapk.org/contact-us",
   },
-  openGraph: {
+    openGraph: {
     title: "Contact Us - Lovely Craft APK",
     description:
       "Contact us for website questions, feedback, content corrections, or concerns about information published on our website.",
     url: "https://lovelycraftapk.org/contact-us",
     siteName: "Lovely Craft APK",
+    images: [
+      {
+        url: "/logo.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Lovely Craft APK Gameplay Preview",
+      },
+    ],
+    locale: "en_US",
     type: "website",
   },
 };

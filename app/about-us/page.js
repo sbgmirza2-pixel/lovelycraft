@@ -9,12 +9,21 @@ export const metadata = {
   alternates: {
     canonical: "https://lovelycraftapk.org/about-us",
   },
-  openGraph: {
+    openGraph: {
     title: "About Us - Lovely Craft APK",
     description:
       "Learn about our website, its purpose, and the game information, features, and installation guides available for players.",
     url: "https://lovelycraftapk.org/about-us",
     siteName: "Lovely Craft APK",
+    images: [
+      {
+        url: "/logo.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Lovely Craft APK Gameplay Preview",
+      },
+    ],
+    locale: "en_US",
     type: "website",
   },
 };

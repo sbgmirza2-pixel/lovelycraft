@@ -15,8 +15,17 @@ export const metadata = {
       "Review the terms for using our website, accessing published content, and following external download links.",
     url: "https://lovelycraftapk.org/terms-and-conditions",
     siteName: "Lovely Craft APK",
+    images: [
+      {
+        url: "/logo.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Lovely Craft APK Gameplay Preview",
+      },
+    ],
+    locale: "en_US",
     type: "website",
-  },
+  },  
 };
 
 export default function TermsAndConditionsPage() {
