@@ -20,13 +20,13 @@ const pixelify = Pixelify_Sans({
   display: "swap",
 });
 export const metadata = {
-  title: "Lovely Craft - Download Latest APK V0.2.999 For Android (Features and Guide)",
+  title: "Lovely Craft APK Download v0.2.999 for Android (Latest Version)",
   description:
     "Explore Lovely Craft APK features, gameplay, piston mechanics, customization, requirements, safety tips, and everything you need to know before installing.",
   
   metadataBase: new URL("https://lovelycraftapk.org"),
   openGraph: {
-    title: "Lovely Craft - Download Latest APK V0.2.999 For Android (Features and Guide)",
+    title: "Lovely Craft APK Download v0.2.999 for Android (Latest Version)",
     description:
       "Explore Lovely Craft APK features, gameplay, piston mechanics, customization, requirements, safety tips, and everything you need to know before installing.",
     url: "https://lovelycraftapk.org",
@@ -44,14 +44,12 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Lovely Craft - Download Latest APK V0.2.999 For Android (Features and Guide)",
+    title: "Lovely Craft APK Download v0.2.999 for Android (Latest Version)",
     description:
       "Explore Lovely Craft APK features, gameplay, piston mechanics, customization, requirements, safety tips, and everything you need to know before installing.",
     images: ["/logo.jpg],"],
   },
-  alternates: {
-    canonical: "https://lovelycraftapk.org",
-  },
+
 };
 export default function RootLayout({ children }) {
   return (

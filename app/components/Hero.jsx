@@ -20,7 +20,7 @@ export default function Hero() {
           </h1>
 
           <p className="font-[var(--font-body)] text-[1.18rem] text-[#51655A] max-w-[58ch] m-0 leading-relaxed">
-            Lovely Craft Piston Trap is developed by Crime. This game is available for Android, Windows, and Linux. The developer&apos;s release notes from October 2025 version 0.2.99 on Android, but other version numbers can find on some third-party APK sites. Users should check the version, size, and source of any APK when they want to install.
+            Lovely Craft Piston Trap is developed by Crime. This game is available for Android, Windows, and Linux. The developer&apos;s release notes from October 2025 version 0.2.999 on Android, but other version numbers can find on some third-party APK sites. Users should check the version, size, and source of any APK when they want to install.
           </p>
 
           <div className="flex flex-wrap gap-3 justify-start items-center relative">

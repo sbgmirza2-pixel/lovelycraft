@@ -1,6 +1,6 @@
 const SITE_URL = 'https://lovelycraftapk.org';
 export const metadata = {
-  title: "Lovely Craft - Download Latest APK V0.2.999 For Android (Features and Guide)",
+  title: "Lovely Craft APK Download v0.2.999 for Android (Latest Version)",
   description: "Explore Lovely Craft APK features, gameplay, piston mechanics, customization, requirements, safety tips, and everything you need to know before installing.",
    alternates: {
     canonical: SITE_URL,
