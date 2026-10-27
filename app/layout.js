@@ -23,7 +23,9 @@ export const metadata = {
   title: "Lovely Craft APK Download v0.2.999 for Android (Latest Version)",
   description:
     "Explore Lovely Craft APK features, gameplay, piston mechanics, customization, requirements, safety tips, and everything you need to know before installing.",
-  
+   verification: {
+  google: "-FwrITWWdqc11wn039-MW6afycqV_mEy5osgMy-6yCA",
+},
   metadataBase: new URL("https://lovelycraftapk.org"),
   openGraph: {
     title: "Lovely Craft APK Download v0.2.999 for Android (Latest Version)",
