@@ -9,7 +9,7 @@ export default function ProsCons() {
   ];
 
   const cons = [
-    "Not for children",
+    
     "APK versions can be hard to verify",
     "Third-party websites may contain conflicting information",
     "Requirements change between releases",

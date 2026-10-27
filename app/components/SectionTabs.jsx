@@ -16,18 +16,19 @@ export default function SectionTabs() {
     { id: 'safety', label: 'Safety and security guidelines' },
     { id: 'who-should-try', label: 'Who should try Lovely Craft APK?' },
     { id: 'faq', label: 'Frequently asked questions' },
-    { id: 'how-to-play', label: 'How to play Lovely Craft APK on Windows or PC' }
+    { id: 'how-to-play', label: 'How to play Lovely Craft APK on Windows or PC' },
+    { id: 'screenshots', label: 'lovely craft screen shots' }
   ];
 
   const appInfoData = [
     { label: "APP NAME", value: "Lovely Craft Piston Trap" },
     { label: "DEVELOPER", value: "Crime" },
     { label: "VERSION", value: "V0.2.999" },
-    { label: "FILE SIZE", value: "1500 MB" },
+    { label: "FILE SIZE", value: "15 MB" },
     { label: "REQUIRES", value: "Android 5.0+" },
     { label: "PLATFORMS", value: "Android, Windows, Linux" },
     { label: "LAST UPDATE", value: "August 9, 2026" },
-    { label: "AGE", value: "18+" },
+    
   ];
 
   useEffect(() => {

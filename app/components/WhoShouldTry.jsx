@@ -4,7 +4,7 @@ export default function WhoShouldTry() {
     "Prefer to experiment instead of following a set story.",
     "Like to see how all the elements of the game fit together.",
     "Want a casual game for creative and experimental play.",
-    "Meet the game's 18+ age requirement."
+    
   ];
 
   return (

@@ -9,8 +9,7 @@ export const metadata = {
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import SectionTabs from "./components/SectionTabs";
-import TableOfContents from "./components/TableOfContents";
-import AppInfo from "./components/AppInfo";
+
 import About from "./components/About";
 import Features from "./components/Features";
 import Checklist from "./components/Checklist";
