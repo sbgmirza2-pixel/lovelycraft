@@ -116,7 +116,8 @@ export default function DownloadContentPage() {
 
                 {/* Download Button with Icon */}
                 <a
-                  href="#download"
+                  href="https://cdn.parisdeschanel.com/Lovely-Craft-v0.2.999-MOD-GMA.apk"
+                  rel="nofollow"
                   onClick={(e) => {
                     e.preventDefault();
                     alert("Your Lovely Craft APK download has started!");
