@@ -57,6 +57,10 @@ export default function Home() {
         <About />
       </div>
 
+       <div id="screenshots">
+        <Screenshots />
+      </div>
+
       <div id="features">
         <Features />
       </div>
@@ -67,9 +71,7 @@ export default function Home() {
        <div id="how-to-play">
         <HowToPlay />
       </div>
-      <div id="screenshots">
-        <Screenshots />
-      </div>
+     
 
     
       <div id="install">
