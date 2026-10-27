@@ -11,7 +11,7 @@ export const metadata = {
     canonical: "https://lovelycraftapk.org/blogs",
   },
     openGraph: {
-    title: "Blogs - Lovely Craft APK",
+    title: "Blogs",
     description:
       "Explore guides, trap tutorials, piston mechanics, and compatibility tips for Lovely Craft APK. ",
     url: "https://lovelycraftapk.org/blogs",
