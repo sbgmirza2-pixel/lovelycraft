@@ -1,7 +1,7 @@
 const SITE_URL = 'https://lovelycraftapk.org/';
 export const metadata = {
   title: "Lovely Craft APK Download v0.2.999 for Android (Latest Version)",
-  description: "Explore Lovely Craft APK features, gameplay, piston mechanics, customization, requirements, safety tips, and everything you need to know before installing.",
+  description: "Download Lovely Craft Piston Trap APK for Android and enjoy creative building, piston traps, resource gathering, and sandbox gameplay.",
    alternates: {
     canonical: SITE_URL,
   },
@@ -36,7 +36,7 @@ export default function Home() {
       "price": "0",
       "priceCurrency": "USD"
     },
-    "description": "Explore Lovely Craft APK features, gameplay, piston mechanics, customization, requirements, safety tips, and everything you need to know before installing.",
+    "description": "Download Lovely Craft Piston Trap APK for Android and enjoy creative building, piston traps, resource gathering, and sandbox gameplay.",
   };
 
   return (
