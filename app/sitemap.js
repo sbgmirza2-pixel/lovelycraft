@@ -1,5 +1,5 @@
 export default function sitemap() {
-  const baseUrl = 'https://lovelycraftapk.org';
+  const baseUrl = 'https://lovelycraftapk.org/';
 
   return [
     {
