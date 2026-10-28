@@ -49,7 +49,7 @@ export const metadata = {
     title: "Lovely Craft APK Download v0.2.999 for Android (Latest Version)",
     description:
       "Download Lovely Craft Piston Trap APK for Android and enjoy creative building, piston traps, resource gathering, and sandbox gameplay.",
-    images: ["/logo.jpg],"],
+    images: ["/logo.jpg,"],
   },
 
 };

@@ -24,19 +24,52 @@ import Footer from "./components/Footer";
 import Screenshots from "./components/Screenshots";
 
 export default function Home() {
-    const jsonLd = {
+
+  const jsonLd = {
     "@context": "https://schema.org",
-    "@type": "SoftwareApplication",
-    "name": "Lovely Craft APK",
-    "operatingSystem": "ANDROID",
-    "applicationCategory": "GameApplication",
-    "softwareVersion": "0.2.999",
-    "offers": {
-      "@type": "Offer",
-      "price": "0",
-      "priceCurrency": "USD"
-    },
-    "description": "Download Lovely Craft Piston Trap APK for Android and enjoy creative building, piston traps, resource gathering, and sandbox gameplay.",
+    "@graph": [
+      {
+        "@type": "SoftwareApplication",
+        "name": "Lovely Craft APK",
+        "operatingSystem": "ANDROID",
+        "applicationCategory": "GameApplication",
+        "softwareVersion": "0.2.999",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "USD"
+        },
+        "description": "Download Lovely Craft Piston Trap APK for Android and enjoy creative building, piston traps, resource gathering, and sandbox gameplay."
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://lovelycraftapk.org/#website",
+        "url": "https://lovelycraftapk.org/",
+        "name": "Lovely Craft APK",
+        "publisher": {
+          "@id": "https://lovelycraftapk.org/#organization"
+        }
+      },
+      {
+        "@type": "Organization",
+        "@id": "https://lovelycraftapk.org/#organization",
+        "name": "Lovely Craft APK",
+        "url": "https://lovelycraftapk.org/",
+       
+      },
+      {
+        "@type": "WebPage",
+        "@id": "https://lovelycraftapk.org/#webpage",
+        "url": "https://lovelycraftapk.org/",
+        "name": "Lovely Craft APK Download v0.2.999 for Android",
+        "datePublished": "2026-08-09T00:00:00+00:00",
+        "dateModified": "2026-08-09T00:00:00+00:00",
+        "author": {
+          "@type": "Person",
+          "name": "Crime"
+        }
+      }
+    ]
   };
 
   return (
