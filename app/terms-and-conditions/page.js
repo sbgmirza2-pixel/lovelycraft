@@ -7,13 +7,13 @@ export const metadata = {
   description:
     "Review the terms for using our website, accessing published content, and following external download links.",
   alternates: {
-    canonical: "https://lovelycraftapk.org/terms-and-conditions",
+    canonical: "https://lovelycraftapk.org/terms-and-conditions/",
   },
   openGraph: {
     title: "Terms and Conditions - Lovely Craft APK",
     description:
       "Review the terms for using our website, accessing published content, and following external download links.",
-    url: "https://lovelycraftapk.org/terms-and-conditions",
+    url: "https://lovelycraftapk.org/terms-and-conditions/",
     siteName: "Lovely Craft APK",
     images: [
       {

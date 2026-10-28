@@ -5,16 +5,16 @@ import Footer from "../components/Footer";
 import { blogsData } from "./blogsData";
 
 export const metadata = {
-  title: "Blogs - Lovely Craft APK",
+  title: "Blogs",
   description: "Explore guides, trap tutorials, piston mechanics, and compatibility tips for Lovely Craft APK.",
   alternates: {
-    canonical: "https://lovelycraftapk.org/blogs",
+    canonical: "https://lovelycraftapk.org/blogs/",
   },
     openGraph: {
     title: "Blogs",
     description:
       "Explore guides, trap tutorials, piston mechanics, and compatibility tips for Lovely Craft APK. ",
-    url: "https://lovelycraftapk.org/blogs",
+    url: "https://lovelycraftapk.org/blogs/",
     siteName: "Lovely Craft APK",
     images: [
       {

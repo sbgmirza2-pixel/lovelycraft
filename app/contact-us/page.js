@@ -7,13 +7,13 @@ export const metadata = {
   description:
     "Contact us for website questions, feedback, content corrections, or concerns about information published on our website.",
   alternates: {
-    canonical: "https://lovelycraftapk.org/contact-us",
+    canonical: "https://lovelycraftapk.org/contact-us/",
   },
     openGraph: {
     title: "Contact Us - Lovely Craft APK",
     description:
       "Contact us for website questions, feedback, content corrections, or concerns about information published on our website.",
-    url: "https://lovelycraftapk.org/contact-us",
+    url: "https://lovelycraftapk.org/contact-us/",
     siteName: "Lovely Craft APK",
     images: [
       {
