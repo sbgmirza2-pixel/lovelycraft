@@ -7,13 +7,13 @@ export const metadata = {
   description:
     "Read our privacy policy to understand how visitor information, cookies, and website data may be collected and used.",
   alternates: {
-    canonical: "https://lovelycraftapk.org/privacy-policy/",
+    canonical: "https://lovelycraftapk.org/privacy-policy",
   },
    openGraph: {
     title: "Privacy Policy - Lovely Craft APK",
     description:
       "Read our privacy policy to understand how visitor information, cookies, and website data may be collected and used.",
-    url: "https://lovelycraftapk.org/privacy-policy/",
+    url: "https://lovelycraftapk.org/privacy-policy",
     siteName: "Lovely Craft APK",
     images: [
       {

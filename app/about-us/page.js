@@ -13,7 +13,7 @@ export const metadata = {
     title: "About Us - Lovely Craft APK",
     description:
       "Learn about our website, its purpose, and the game information, features, and installation guides available for players.",
-    url: "https://lovelycraftapk.org/about-us/",
+    url: "https://lovelycraftapk.org/about-us",
     siteName: "Lovely Craft APK",
     images: [
       {

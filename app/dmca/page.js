@@ -7,13 +7,13 @@ export const metadata = {
   description:
     "Submit copyright complaints and request a review of potentially infringing content published on our website.",
   alternates: {
-    canonical: "https://lovelycraftapk.org/dmca/",
+    canonical: "https://lovelycraftapk.org/dmca",
   },
     openGraph: {
     title: "DMCA Policy - Lovely Craft APK",
     description:
       "Submit copyright complaints and request a review of potentially infringing content published on our website.",
-    url: "https://lovelycraftapk.org/dmca/",
+    url: "https://lovelycraftapk.org/dmca",
     siteName: "Lovely Craft APK",
     images: [
       {
