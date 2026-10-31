@@ -22,7 +22,7 @@ export default function Features() {
     },
     {
       title: "Android version requirements vary",
-      desc: "The system requirements are not the same on every website. For example, one site lists Android 6.0+ and another lists Android 5.1+. Check your device's Android version to avoid installation or compatibility issues."
+      desc: "The system requirements are not the same on every website For example, one site lists Android 6.0+ and another lists Android 5.1+. Check your device's Android version to avoid installation or compatibility issues."
     }
   ];
 
