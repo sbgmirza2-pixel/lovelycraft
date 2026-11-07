@@ -1,11 +1,3 @@
-const SITE_URL = 'https://lovelycraftapk.org';
-export const metadata = {
-  title: "Lovely Craft APK Download v0.2.999 for Android (Latest Version)",
-  description: "Download Lovely Craft Piston Trap APK for Android and enjoy creative building, piston traps, resource gathering, and sandbox gameplay.",
-   alternates: {
-    canonical: SITE_URL,
-  },
-};
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import SectionTabs from "./components/SectionTabs";
@@ -23,74 +15,108 @@ import HowToPlay from "./components/HowToPlay";
 import Footer from "./components/Footer";
 import Screenshots from "./components/Screenshots";
 
-export default function Home() {
+const SITE_URL = "https://lovelycraftapk.org";
+const SITE_NAME = "Lovely Craft";
+const LOGO_URL = `${SITE_URL}/logo.jpg`;
+const TITLE = "Lovely Craft APK Download v0.2.999 for Android (Latest Version)";
+const DESCRIPTION =
+  "Download Lovely Craft Piston Trap APK for Android and enjoy creative building, piston traps, resource gathering, and sandbox gameplay.";
 
+export const metadata = {
+  title: TITLE,
+  description: DESCRIPTION,
+  alternates: {
+    canonical: SITE_URL,
+  },
+};
+
+export default function Home() {
   const jsonLd = {
     "@context": "https://schema.org",
     "@graph": [
       {
         "@type": "SoftwareApplication",
-        "name": "Lovely Craft ",
-        "operatingSystem": "ANDROID",
-        "applicationCategory": "GameApplication",
-        "softwareVersion": "0.2.999",
-        "offers": {
+        "@id": `${SITE_URL}/#app`,
+        name: SITE_NAME,
+        url: SITE_URL,
+        image: LOGO_URL,
+        operatingSystem: "ANDROID",
+        applicationCategory: "GameApplication",
+        softwareVersion: "0.2.999",
+        description: DESCRIPTION,
+        offers: {
           "@type": "Offer",
-          "price": "0",
-          "priceCurrency": "USD"
+          price: "0",
+          priceCurrency: "USD",
         },
-        "description": "Download Lovely Craft Piston Trap APK for Android and enjoy creative building, piston traps, resource gathering, and sandbox gameplay."
+        publisher: {
+          "@id": `${SITE_URL}/#organization`,
+        },
       },
       {
         "@type": "WebSite",
-        "@id": "https://lovelycraftapk.org/#website",
-        "url": "https://lovelycraftapk.org",
-        "name": "Lovely Craft",
-        "publisher": {
-          "@id": "https://lovelycraftapk.org/#organization"
-        }
+        "@id": `${SITE_URL}/#website`,
+        url: SITE_URL,
+        name: SITE_NAME,
+        inLanguage: "en-US",
+        publisher: {
+          "@id": `${SITE_URL}/#organization`,
+        },
       },
       {
         "@type": "Organization",
-        "@id": "https://lovelycraftapk.org/#organization",
-        "name": "Lovely Craft",
-        "url": "https://lovelycraftapk.org",
-       
+        "@id": `${SITE_URL}/#organization`,
+        name: SITE_NAME,
+        url: SITE_URL,
+        logo: {
+          "@type": "ImageObject",
+          url: LOGO_URL,
+        },
       },
       {
         "@type": "WebPage",
-        "@id": "https://lovelycraftapk.org/#webpage",
-        "url": "https://lovelycraftapk.org",
-        "name": "Lovely Craft",
-        "datePublished": "2026-08-09T00:00:00+00:00",
-        "dateModified": "2026-08-09T00:00:00+00:00",
-        "author": {
-          "@type": "Person",
-          "name": "Crime"
-        }
-      }
-    ]
+        "@id": `${SITE_URL}/#webpage`,
+        url: SITE_URL,
+        name: TITLE,
+        description: DESCRIPTION,
+        inLanguage: "en-US",
+        isPartOf: {
+          "@id": `${SITE_URL}/#website`,
+        },
+        about: {
+          "@id": `${SITE_URL}/#app`,
+        },
+        primaryImageOfPage: {
+          "@type": "ImageObject",
+          url: LOGO_URL,
+        },
+        datePublished: "2026-08-09T00:00:00+00:00",
+        dateModified: "2026-08-09T00:00:00+00:00", 
+        author: {
+          "@type": "Organization",
+          name: "Lovely Craft",
+        },
+      },
+    ],
   };
 
   return (
     <main className="min-h-screen bg-[#F5F9F1] text-[#15251B]">
-      
-  {/* Schema Markup (Structured Data) */}
+      {/* Schema Markup (Structured Data) */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
+
       <Navbar />
       <Hero />
       <SectionTabs />
-      
-  
 
       <div id="about">
         <About />
       </div>
 
-       <div id="screenshots">
+      <div id="screenshots">
         <Screenshots />
       </div>
 
@@ -101,12 +127,11 @@ export default function Home() {
       <div id="checklist">
         <Checklist />
       </div>
-       <div id="how-to-play">
+
+      <div id="how-to-play">
         <HowToPlay />
       </div>
-     
 
-    
       <div id="install">
         <InstallGuide />
       </div>
@@ -119,16 +144,15 @@ export default function Home() {
         <WhoShouldTry />
       </div>
 
-        <div id="pros-cons">
+      <div id="pros-cons">
         <ProsCons />
       </div>
 
-         <div id="faq">
+      <div id="faq">
         <Faq />
       </div>
-      <Conclusion />
 
-    
+      <Conclusion />
 
       <Footer />
     </main>

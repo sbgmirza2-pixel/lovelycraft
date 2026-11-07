@@ -3,22 +3,27 @@ import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import FaqsAccordion from "./FaqsAccordion";
 
+const SITE_URL = "https://lovelycraftapk.org";
+const PAGE_URL = `${SITE_URL}/faqs`;
+const LOGO_URL = `${SITE_URL}/logo.jpg`;
+const TITLE = "Lovely Craft APK FAQs - Install, Safety & Updates";
+const DESCRIPTION =
+  "Find answers about Lovely Craft APK, Android installation, compatibility, updates, and common download problems.";
+
 export const metadata = {
-  title: "FAQs",
-  description:
-    "Find answers about Lovely Craft APK, Android installation, compatibility, updates, and common download problems.",
+  title: TITLE,
+  description: DESCRIPTION,
   alternates: {
-    canonical: "https://lovelycraftapk.org/faqs",
+    canonical: PAGE_URL,
   },
-    openGraph: {
-    title: "FAQs",
-    description:
-      "Find answers about Lovely Craft APK, Android installation, compatibility, updates, and common download problems.",
-    url: "https://lovelycraftapk.org/faqs",
+  openGraph: {
+    title: TITLE,
+    description: DESCRIPTION,
+    url: PAGE_URL,
     siteName: "Lovely Craft",
     images: [
       {
-        url: "/logo.jpg",
+        url: LOGO_URL,
         width: 1200,
         height: 630,
         alt: "Lovely Craft APK Gameplay Preview",
@@ -26,6 +31,12 @@ export const metadata = {
     ],
     locale: "en_US",
     type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: TITLE,
+    description: DESCRIPTION,
+    images: [LOGO_URL],
   },
 };
 
@@ -53,26 +64,70 @@ export default function FAQsPage() {
     }
   ];
 
+  // ---------- JSON-LD Schema ----------
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "FAQPage",
+        "@id": `${PAGE_URL}#faqpage`,
+        url: PAGE_URL,
+        name: TITLE,
+        description: DESCRIPTION,
+        inLanguage: "en-US",
+        isPartOf: { "@id": `${SITE_URL}/#website` },
+        mainEntity: faqsList.map((faq) => ({
+          "@type": "Question",
+          name: faq.question,
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: faq.answer,
+          },
+        })),
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": `${PAGE_URL}#breadcrumb`,
+        itemListElement: [
+          { "@type": "ListItem", position: 1, name: "Home", item: SITE_URL },
+          { "@type": "ListItem", position: 2, name: "FAQs", item: PAGE_URL },
+        ],
+      },
+    ],
+  };
+
   return (
     <div className="min-h-screen bg-[#F5F9F1] flex flex-col justify-between font-[var(--font-body)] text-[#15251B]">
+      {/* JSON-LD Structured Data */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+
       {/* Navbar Integration */}
       <Navbar />
 
       {/* Main Content */}
       <main className="flex-grow max-w-[800px] w-full mx-auto px-4 py-12 md:py-16">
-        
-        {/* Page Header with h2 */}
+
+        {/* Visible Breadcrumb (schema ke saath match karta hai) */}
+        <nav className="text-xs text-[#6B7E74] mb-4 flex items-center gap-2">
+          <Link href="/" className="hover:text-[#23891A]">Home</Link>
+          <span>/</span>
+          <span>FAQs</span>
+        </nav>
+
+        {/* Page Header with h1 */}
         <div className="mb-10 text-left">
-          <h2 className="text-[clamp(2.2rem,5vw,3.5rem)] font-[var(--font-display)] font-extrabold text-[#15251B] tracking-tight mb-3">
+          <h1 className="text-[clamp(2.2rem,5vw,3.5rem)] font-[var(--font-display)] font-extrabold text-[#15251B] tracking-tight mb-3">
             Frequently Asked Questions
-          </h2>
-     
+          </h1>
         </div>
 
         {/* FAQs Accordion Client Component */}
         <FaqsAccordion faqsList={faqsList} />
 
-        {/* Missing Footer Note Added */}
+        {/* Footer Note */}
         <p className="mt-8 font-[var(--font-body)] text-sm md:text-base text-[#6B7E74] leading-relaxed text-left border-t border-[#DCE8D6] pt-6">
           For more information, explore the guides available on{" "}
           <Link href="/" className="text-[#23891A] font-semibold hover:underline">

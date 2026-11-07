@@ -7,25 +7,38 @@ import { blogsData } from "../blogsData";
 
 export const instant = false;
 
+const SITE_URL = "https://lovelycraftapk.org";
+const SITE_NAME = "Lovely Craft";
+const LOGO_URL = `${SITE_URL}/logo.webp`; // apna asli logo path check kar lena
+
+// blog.image relative ho ya absolute, dono ke liye full URL bana deta hai
+const getImageUrl = (image) => {
+  if (!image) return `${SITE_URL}/featured-image-of-lovely-craft.webp`;
+  return image.startsWith("http") ? image : `${SITE_URL}${image.startsWith("/") ? "" : "/"}${image}`;
+};
+
 export async function generateMetadata({ params }) {
   const resolvedParams = await params;
   const blog = blogsData.find((b) => b.slug === resolvedParams.slug);
   if (!blog) return {};
 
+  const pageUrl = `${SITE_URL}/blogs/${blog.slug}`;
+  const imageUrl = getImageUrl(blog.image);
+
   return {
     title: `${blog.title} - Lovely Craft APK`,
     description: blog.description,
     alternates: {
-      canonical: `https://lovelycraftapk.org/blogs/${blog.slug}`,
+      canonical: pageUrl,
     },
     openGraph: {
       title: `${blog.title}`,
       description: blog.description,
-      url: `https://lovelycraftapk.org/blogs/${blog.slug}`,
-      siteName: "Lovely Craft",
+      url: pageUrl,
+      siteName: SITE_NAME,
       images: [
         {
-          url: blog.image,
+          url: imageUrl,
           width: 1200,
           height: 630,
           alt: blog.title,
@@ -33,6 +46,12 @@ export async function generateMetadata({ params }) {
       ],
       locale: "en_US",
       type: "article",
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: blog.title,
+      description: blog.description,
+      images: [imageUrl],
     },
   };
 }
@@ -53,6 +72,49 @@ export default async function SingleBlogPage({ params }) {
 
   const blog = blogsData[blogIndex];
   const nextBlog = blogsData[(blogIndex + 1) % blogsData.length];
+
+  // ---------- JSON-LD Schema ----------
+  const pageUrl = `${SITE_URL}/blogs/${blog.slug}`;
+  const imageUrl = getImageUrl(blog.image);
+
+  const articleLd = {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    headline: blog.title,
+    description: blog.description,
+    image: imageUrl,
+    url: pageUrl,
+    datePublished: blog.date, // ISO format (2025-01-15) best hai
+    dateModified: blog.date,
+    author: {
+      "@type": "Organization",
+      name: SITE_NAME,
+      url: SITE_URL,
+    },
+    publisher: {
+      "@type": "Organization",
+      name: SITE_NAME,
+      url: SITE_URL,
+      logo: {
+        "@type": "ImageObject",
+        url: LOGO_URL,
+      },
+    },
+    mainEntityOfPage: {
+      "@type": "WebPage",
+      "@id": pageUrl,
+    },
+  };
+
+  const breadcrumbLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: SITE_URL },
+      { "@type": "ListItem", position: 2, name: "Blogs", item: `${SITE_URL}/blogs` },
+      { "@type": "ListItem", position: 3, name: blog.title, item: pageUrl },
+    ],
+  };
 
   // Markdown Links [Text](URL) Parser using React Link Component
   const parseMarkdownLinks = (text) => {
@@ -114,6 +176,16 @@ export default async function SingleBlogPage({ params }) {
 
   return (
     <div className="min-h-screen bg-white flex flex-col justify-between font-[var(--font-body)] text-[#15251B]">
+      {/* JSON-LD Structured Data */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbLd) }}
+      />
+
       <Navbar />
 
       <main className="py-12 md:py-16 flex-grow relative">
