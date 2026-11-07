@@ -32,7 +32,7 @@ export const metadata = {
     description:
       "Download Lovely Craft Piston Trap APK for Android and enjoy creative building, piston traps, resource gathering, and sandbox gameplay.",
     url: "https://lovelycraftapk.org",
-    siteName: "Lovely Craft APK",
+    siteName: "Lovely Craft ",
     images: [
       {
         url: "/logo.jpg",

@@ -15,7 +15,7 @@ export const metadata = {
     description:
       "Explore guides, trap tutorials, piston mechanics, and compatibility tips for Lovely Craft APK. ",
     url: "https://lovelycraftapk.org/blogs",
-    siteName: "Lovely Craft APK",
+    siteName: "Lovely Craft ",
     images: [
       {
         url: "/logo.jpg",

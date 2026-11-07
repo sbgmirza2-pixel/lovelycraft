@@ -4,18 +4,18 @@ import Footer from "../components/Footer";
 import FaqsAccordion from "./FaqsAccordion";
 
 export const metadata = {
-  title: "Frequently Asked Questions - Lovely Craft APK",
+  title: "FAQs",
   description:
     "Find answers about Lovely Craft APK, Android installation, compatibility, updates, and common download problems.",
   alternates: {
     canonical: "https://lovelycraftapk.org/faqs",
   },
     openGraph: {
-    title: "Frequently Asked Questions - Lovely Craft APK",
+    title: "FAQs",
     description:
       "Find answers about Lovely Craft APK, Android installation, compatibility, updates, and common download problems.",
     url: "https://lovelycraftapk.org/faqs",
-    siteName: "Lovely Craft APK",
+    siteName: "Lovely Craft",
     images: [
       {
         url: "/logo.jpg",

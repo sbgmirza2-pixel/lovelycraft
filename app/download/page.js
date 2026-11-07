@@ -11,7 +11,7 @@ export const metadata = {
     description:
       "Download the latest version of Lovely Craft APK safely. Follow our easy guide to install and play the game on Android devices or PC.",
     url: "https://lovelycraftapk.org/download",
-    siteName: "Lovely Craft APK",
+    siteName: "Lovely Craft",
     images: [
       {
         url: "/logo.jpg",

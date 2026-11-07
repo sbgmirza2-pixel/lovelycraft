@@ -3,18 +3,18 @@ import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 
 export const metadata = {
-  title: "Disclaimer - Lovely Craft APK",
+  title: "Disclaimer",
   description:
     "Read our disclaimer covering game information, APK downloads, third-party links, trademarks, and website responsibility.",
   alternates: {
     canonical: "https://lovelycraftapk.org/disclaimer",
   },
     openGraph: {
-    title: "Disclaimer - Lovely Craft APK",
+    title: "Disclaimer",
     description:
       "Read our disclaimer covering game information, APK downloads, third-party links, trademarks, and website responsibility.",
     url: "https://lovelycraftapk.org/disclaimer",
-    siteName: "Lovely Craft APK",
+    siteName: "Lovely Craft",
     images: [
       {
         url: "/logo.jpg",

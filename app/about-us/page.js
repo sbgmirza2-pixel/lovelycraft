@@ -3,18 +3,18 @@ import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 
 export const metadata = {
-  title: "About Us - Lovely Craft APK",
+  title: "About Us",
   description:
     "Learn about our website, its purpose, and the game information, features, and installation guides available for players.",
   alternates: {
     canonical: "https://lovelycraftapk.org/about-us/",
   },
     openGraph: {
-    title: "About Us - Lovely Craft APK",
+    title: "About Us",
     description:
       "Learn about our website, its purpose, and the game information, features, and installation guides available for players.",
     url: "https://lovelycraftapk.org/about-us",
-    siteName: "Lovely Craft APK",
+    siteName: "Lovely Craft ",
     images: [
       {
         url: "/logo.jpg",

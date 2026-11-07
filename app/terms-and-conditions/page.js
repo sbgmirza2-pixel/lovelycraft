@@ -3,18 +3,18 @@ import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 
 export const metadata = {
-  title: "Terms and Conditions - Lovely Craft APK",
+  title: "Terms and Conditions",
   description:
     "Review the terms for using our website, accessing published content, and following external download links.",
   alternates: {
     canonical: "https://lovelycraftapk.org/terms-and-conditions",
   },
   openGraph: {
-    title: "Terms and Conditions - Lovely Craft APK",
+    title: "Terms and Conditions",
     description:
       "Review the terms for using our website, accessing published content, and following external download links.",
     url: "https://lovelycraftapk.org/terms-and-conditions",
-    siteName: "Lovely Craft APK",
+    siteName: "Lovely Craft",
     images: [
       {
         url: "/logo.jpg",

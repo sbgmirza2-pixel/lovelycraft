@@ -3,14 +3,14 @@ import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 
 export const metadata = {
-  title: "DMCA Policy - Lovely Craft APK",
+  title: "DMCA",
   description:
     "Submit copyright complaints and request a review of potentially infringing content published on our website.",
   alternates: {
     canonical: "https://lovelycraftapk.org/dmca",
   },
     openGraph: {
-    title: "DMCA Policy - Lovely Craft APK",
+    title: "DMCA ",
     description:
       "Submit copyright complaints and request a review of potentially infringing content published on our website.",
     url: "https://lovelycraftapk.org/dmca",

@@ -30,7 +30,7 @@ export default function Home() {
     "@graph": [
       {
         "@type": "SoftwareApplication",
-        "name": "Lovely Craft APK",
+        "name": "Lovely Craft ",
         "operatingSystem": "ANDROID",
         "applicationCategory": "GameApplication",
         "softwareVersion": "0.2.999",
@@ -45,7 +45,7 @@ export default function Home() {
         "@type": "WebSite",
         "@id": "https://lovelycraftapk.org/#website",
         "url": "https://lovelycraftapk.org",
-        "name": "Lovely Craft APK",
+        "name": "Lovely Craft",
         "publisher": {
           "@id": "https://lovelycraftapk.org/#organization"
         }
@@ -53,7 +53,7 @@ export default function Home() {
       {
         "@type": "Organization",
         "@id": "https://lovelycraftapk.org/#organization",
-        "name": "Lovely Craft APK",
+        "name": "Lovely Craft",
         "url": "https://lovelycraftapk.org",
        
       },
@@ -61,7 +61,7 @@ export default function Home() {
         "@type": "WebPage",
         "@id": "https://lovelycraftapk.org/#webpage",
         "url": "https://lovelycraftapk.org",
-        "name": "Lovely Craft APK Download v0.2.999 for Android",
+        "name": "Lovely Craft",
         "datePublished": "2026-08-09T00:00:00+00:00",
         "dateModified": "2026-08-09T00:00:00+00:00",
         "author": {
