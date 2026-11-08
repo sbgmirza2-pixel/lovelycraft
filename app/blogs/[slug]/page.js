@@ -4,12 +4,12 @@ import { notFound } from "next/navigation";
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
 import { blogsData } from "../blogsData";
-
 export const instant = false;
+
 
 const SITE_URL = "https://lovelycraftapk.org";
 const SITE_NAME = "Lovely Craft";
-const LOGO_URL = `${SITE_URL}/logo.webp`; // apna asli logo path check kar lena
+const LOGO_URL = `${SITE_URL}/logo.jpg`;
 
 // blog.image relative ho ya absolute, dono ke liye full URL bana deta hai
 const getImageUrl = (image) => {
@@ -84,7 +84,7 @@ export default async function SingleBlogPage({ params }) {
     description: blog.description,
     image: imageUrl,
     url: pageUrl,
-    datePublished: blog.date, // ISO format (2025-01-15) best hai
+    datePublished: blog.date, 
     dateModified: blog.date,
     author: {
       "@type": "Organization",

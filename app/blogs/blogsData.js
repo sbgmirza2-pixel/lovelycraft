@@ -10,14 +10,14 @@ export const blogsData = [
       sections: [
         {
           heading: "What Makes Lovely Craft APK Different?",
-          text: "Lovely Craft Piston Trap has a different gameplay from other general sandbox games. Its main elements are mechanical setups, item collection, customization, and progression.\n\nIf you are new to the game, check out our [Lovely Craft Piston Trap Guide for Beginners](/blogs/lovely-craft-piston-trap-guide-for-beginners) to understand the core building blocks.\n\nHere are some features that make it different from the other games:\n- Piston-based mechanics\n- Block-based environment\n- Item collection\n- Customization\n- Adult-oriented content"
+          text: "Lovely Craft Piston Trap has a different gameplay from other general sandbox games. Its main elements are mechanical setups, item collection, customization, and progression.\n\nIf you are new to the game, check out our [Lovely Craft Piston Trap Guide for Beginners](/blogs/lovely-craft-piston-trap-guide-for-beginners) to understand the core building blocks.\n\nHere are some features that make it different from the other games:\n- Piston-based mechanics\n- Block-based environment\n- Item collection\n- Customization\n-Trap and mechanism-based gameplay"
         },
         {
           heading: "Lovely Craft Piston Trap vs Other Sandbox Games",
           table: {
             headers: ["Game Name", "Focus", "Main Difference"],
             rows: [
-              ["Lovely Craft Piston APK", "Piston mechanics and simulation", "Adult-oriented gameplay"],
+              ["Lovely Craft Piston APK", "Piston mechanics and simulation", "Piston-based mechanical gameplay"],
               ["Minecraft", "Building, crafting, and surviving", "Open world creativity"],
               ["Terraria", "Exploration, crafting, and combat", "Adventure and progression"],
               ["Roblox", "User-created experience", "Many different game types"],
@@ -31,7 +31,7 @@ export const blogsData = [
         },
         {
           heading: "Lovely Craft Piston Trap vs Terraria",
-          text: "Terraria is a 2D game where players explore underground areas, collect resources, craft tools, and fight enemies. Players can find new materials and face harder challenges as they progress through the game.\n\nLovely Craft Piston Trap is more about adventure, combat, and boss progression. It's a game with its own mechanical and simulation systems. Terraria is a better option for players who like to explore and fight."
+          text: "Terraria is a 2D game where players explore underground areas, collect resources, craft tools, and fight enemies. Players can find new materials and face harder challenges as they progress through the game.\n\nLovely Craft Piston Trap focuses more on piston mechanics, trap building, and simulation, rather than combat and boss fights. It's a game with its own mechanical and simulation systems. Terraria is a better option for players who like to explore and fight."
         },
         {
           heading: "Lovely Craft Piston Trap vs Roblox",
@@ -39,11 +39,11 @@ export const blogsData = [
         },
         {
           heading: "Lovely Craft Piston Trap vs The Blockheads",
-          text: "The Blockheads is a 2D sandbox game that focuses on the exploration of the environment, gathering of resources, creating items and survival of the player.\n\nLovely Craft Piston Trap, focuses on piston interactions and mature simulation. The two games cater to different types of gameplay; The Blockheads have more resource management and survival-oriented."
+          text: "The Blockheads is a 2D sandbox game that focuses on the exploration of the environment, gathering of resources, creating items and survival of the player.\n\nLovely Craft Piston Trap, focuses on piston interactions and mechanical simulation. The two games cater to different types of gameplay; The Blockheads have more resource management and survival-oriented."
         },
         {
           heading: "Which Sandbox Game Should You Choose?",
-          text: "Your choice depends on your interest:\n- Lovely Craft Piston Trap is for adults who are interested in its specialized mechanics and simulation elements.\n- Minecraft is a creative building, survival, and open-world exploration game.\n- Terraria is a crafting, adventure, and combat based game.\n- Roblox if you want to access different types of games.\n- The Blockheads is 2D exploration, resource gathering, and survival."
+          text: "Your choice depends on your interest:\n- Lovely Craft Piston Trap is for players who enjoy piston mechanics, trap building, and simulation-style gameplay and simulation elements.\n- Minecraft is a creative building, survival, and open-world exploration game.\n- Terraria is a crafting, adventure, and combat based game.\n- Roblox if you want to access different types of games.\n- The Blockheads is 2D exploration, resource gathering, and survival."
         },
         {
           heading: "Conclusion",

@@ -7,7 +7,7 @@ export const metadata = {
   description:
     "Learn about our website, its purpose, and the game information, features, and installation guides available for players.",
   alternates: {
-    canonical: "https://lovelycraftapk.org/about-us/",
+    canonical: "https://lovelycraftapk.org/about-us",
   },
     openGraph: {
     title: "About Us",
