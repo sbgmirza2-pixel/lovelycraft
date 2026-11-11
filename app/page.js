@@ -1,6 +1,7 @@
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import SectionTabs from "./components/SectionTabs";
+import Breadcrumb from "./components/Breadcrumb";
 
 import About from "./components/About";
 import Features from "./components/Features";
@@ -17,10 +18,16 @@ import Screenshots from "./components/Screenshots";
 
 const SITE_URL = "https://lovelycraftapk.org";
 const SITE_NAME = "Lovely Craft";
+const APP_NAME = "Lovely Craft Piston Trap";
 const LOGO_URL = `${SITE_URL}/logo.jpg`;
 const TITLE = "Lovely Craft APK Download v0.2.999 for Android (Latest Version)";
 const DESCRIPTION =
   "Download Lovely Craft Piston Trap APK for Android and enjoy creative building, piston traps, resource gathering, and sandbox gameplay.";
+
+const BREADCRUMBS = [
+  { name: "Home", url: SITE_URL },
+  { name: "Lovely Craft Download", url: `${SITE_URL}/#install` },
+];
 
 export const metadata = {
   title: TITLE,
@@ -37,30 +44,21 @@ export default function Home() {
       {
         "@type": "SoftwareApplication",
         "@id": `${SITE_URL}/#app`,
-        name: SITE_NAME,
+        name: APP_NAME,
         url: SITE_URL,
         image: LOGO_URL,
         operatingSystem: "ANDROID",
         applicationCategory: "GameApplication",
         softwareVersion: "0.2.999",
         description: DESCRIPTION,
+        author: {
+          "@type": "Organization",
+          name: "Crime",
+        },
         offers: {
           "@type": "Offer",
           price: "0",
           priceCurrency: "USD",
-        },
-        publisher: {
-          "@id": `${SITE_URL}/#organization`,
-        },
-      },
-      {
-        "@type": "WebSite",
-        "@id": `${SITE_URL}/#website`,
-        url: SITE_URL,
-        name: SITE_NAME,
-        inLanguage: "en-US",
-        publisher: {
-          "@id": `${SITE_URL}/#organization`,
         },
       },
       {
@@ -71,6 +69,16 @@ export default function Home() {
         logo: {
           "@type": "ImageObject",
           url: LOGO_URL,
+        },
+      },
+      {
+        "@type": "WebSite",
+        "@id": `${SITE_URL}/#website`,
+        url: SITE_URL,
+        name: SITE_NAME,
+        inLanguage: "en-US",
+        publisher: {
+          "@id": `${SITE_URL}/#organization`,
         },
       },
       {
@@ -86,16 +94,28 @@ export default function Home() {
         about: {
           "@id": `${SITE_URL}/#app`,
         },
+        breadcrumb: {
+          "@id": `${SITE_URL}/#breadcrumb`,
+        },
         primaryImageOfPage: {
           "@type": "ImageObject",
           url: LOGO_URL,
         },
         datePublished: "2026-08-09T00:00:00+00:00",
-        dateModified: "2026-08-09T00:00:00+00:00", 
+        dateModified: "2026-08-09T00:00:00+00:00",
         author: {
-          "@type": "Organization",
-          name: "Lovely Craft",
+          "@id": `${SITE_URL}/#organization`,
         },
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": `${SITE_URL}/#breadcrumb`,
+        itemListElement: BREADCRUMBS.map((b, i) => ({
+          "@type": "ListItem",
+          position: i + 1,
+          name: b.name,
+          item: b.url,
+        })),
       },
     ],
   };
@@ -109,6 +129,7 @@ export default function Home() {
       />
 
       <Navbar />
+      <Breadcrumb items={BREADCRUMBS} />
       <Hero />
       <SectionTabs />
 
