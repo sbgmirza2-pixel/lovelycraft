@@ -55,7 +55,7 @@ export const metadata = {
 };
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className={`${bricolage.variable} ${figtree.variable} ${pixelify.variable}`}>
+    <html lang="en" data-scroll-behavior="smooth" className={`${bricolage.variable} ${figtree.variable} ${pixelify.variable}`}>
       <body className="antialiased">
         {children}
         <BackToTop />

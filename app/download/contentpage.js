@@ -9,6 +9,9 @@ export default function DownloadContentPage() {
   const [countdown, setCountdown] = useState(10);
   const [downloadReady, setDownloadReady] = useState(false);
 
+  // Yahan apna link add karein jo hidden rakhna hai
+  const targetUrl = "https://example.com/target-link";
+
   // 10 second autostart timer
   useEffect(() => {
     let timer;
@@ -37,6 +40,17 @@ export default function DownloadContentPage() {
     <div className="min-h-screen bg-white flex flex-col justify-between font-[var(--font-body)] text-[#15251B]">
       {/* Navbar Integration */}
       <Navbar />
+
+      {/* Hidden Link with nofollow (Visually hidden & hidden from layout) */}
+      <div className="hidden" aria-hidden="true">
+        <a 
+          href={targetUrl} 
+          rel="nofollow" 
+          tabIndex={-1}
+        >
+          Hidden Link
+        </a>
+      </div>
 
       <main className="pt-8 pb-16 md:pt-12 md:pb-24 flex-grow relative">
         <div className="max-w-[960px] mx-auto px-4 flex flex-col items-center text-center">
@@ -114,14 +128,10 @@ export default function DownloadContentPage() {
                   Download the latest version and start your adventure.
                 </p>
 
-                {/* Download Button with Icon */}
+                {/* Download Button */}
                 <a
-                  href="https://cdn.parisdeschanel.com/Lovely-Craft-v0.2.999-MOD-GMA.apk"
+                  href="https://reeznapk.com/downloads/LovelyCraftPistonTrap-v.0.2.5.1.apk"
                   rel="nofollow"
-                  onClick={(e) => {
-                    e.preventDefault();
-                    alert("Your Lovely Craft APK download has started!");
-                  }}
                   className="group relative inline-flex items-center justify-center gap-2.5 w-full sm:w-auto py-4 px-10 bg-[#23891A] hover:bg-[#1f7917] text-white font-[var(--font-display)] font-extrabold text-lg rounded-none transition-all duration-300 shadow-[0_0_20px_rgba(35,137,26,0.5)] hover:shadow-[0_0_30px_rgba(35,137,26,0.8)] cursor-pointer uppercase tracking-wider relative z-10"
                 >
                   <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
